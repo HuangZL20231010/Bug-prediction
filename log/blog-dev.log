@@ -1,0 +1,55 @@
+2022-09-26 17:44:53.336  INFO 3124 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18.0.2.1 on DESKTOP-SEESNEQ with PID 3124 (D:\ShiXun\Bug-prediction\springboot\target\classes started by 91112 in D:\ShiXun)
+2022-09-26 17:44:53.339  INFO 3124 --- [main] com.example.demo.DemoApplication         : The following 1 profile is active: "dev"
+2022-09-26 17:44:53.826  WARN 3124 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.baomidou.mybatisplus.samples.quickstart.mapper]' package. Please check your configuration.
+2022-09-26 17:44:54.119  INFO 3124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-26 17:44:54.127  INFO 3124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-26 17:44:54.128  INFO 3124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-26 17:44:54.215  INFO 3124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-26 17:44:54.215  INFO 3124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 824 ms
+2022-09-26 17:44:54.632  WARN 3124 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.RankingList ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:44:54.724  WARN 3124 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:44:54.741  WARN 3124 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.UserTrainInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:44:54.786  INFO 3124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-26 17:44:54.795  INFO 3124 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 1.813 seconds (JVM running for 2.684)
+2022-09-26 17:45:48.767  INFO 1924 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18.0.2.1 on DESKTOP-SEESNEQ with PID 1924 (D:\ShiXun\Bug-prediction\springboot\target\classes started by 91112 in D:\ShiXun)
+2022-09-26 17:45:48.769  INFO 1924 --- [main] com.example.demo.DemoApplication         : The following 1 profile is active: "dev"
+2022-09-26 17:45:49.146  WARN 1924 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.baomidou.mybatisplus.samples.quickstart.mapper]' package. Please check your configuration.
+2022-09-26 17:45:49.430  INFO 1924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-26 17:45:49.437  INFO 1924 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-26 17:45:49.438  INFO 1924 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-26 17:45:49.523  INFO 1924 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-26 17:45:49.523  INFO 1924 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 717 ms
+2022-09-26 17:45:49.927  WARN 1924 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.RankingList ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:45:50.022  WARN 1924 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:45:50.040  WARN 1924 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.UserTrainInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:45:50.076  INFO 1924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-26 17:45:50.085  INFO 1924 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 1.606 seconds (JVM running for 2.032)
+2022-09-26 17:46:09.445  INFO 5276 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18.0.2.1 on DESKTOP-SEESNEQ with PID 5276 (D:\ShiXun\Bug-prediction\springboot\target\classes started by 91112 in D:\ShiXun)
+2022-09-26 17:46:09.447  INFO 5276 --- [main] com.example.demo.DemoApplication         : The following 1 profile is active: "dev"
+2022-09-26 17:46:09.831  WARN 5276 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.baomidou.mybatisplus.samples.quickstart.mapper]' package. Please check your configuration.
+2022-09-26 17:46:10.101  INFO 5276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-26 17:46:10.108  INFO 5276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-26 17:46:10.108  INFO 5276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-26 17:46:10.185  INFO 5276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-26 17:46:10.185  INFO 5276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 702 ms
+2022-09-26 17:46:10.563  WARN 5276 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.RankingList ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:46:10.622  WARN 5276 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:46:10.639  WARN 5276 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.UserTrainInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:46:10.678  INFO 5276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-26 17:46:10.686  INFO 5276 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 1.531 seconds (JVM running for 1.966)
+2022-09-26 17:46:24.648  INFO 11668 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18.0.2.1 on DESKTOP-SEESNEQ with PID 11668 (D:\ShiXun\Bug-prediction\springboot\target\classes started by 91112 in D:\ShiXun)
+2022-09-26 17:46:24.650  INFO 11668 --- [main] com.example.demo.DemoApplication         : The following 1 profile is active: "dev"
+2022-09-26 17:46:25.034  WARN 11668 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.baomidou.mybatisplus.samples.quickstart.mapper]' package. Please check your configuration.
+2022-09-26 17:46:25.311  INFO 11668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-26 17:46:25.318  INFO 11668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-26 17:46:25.318  INFO 11668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-26 17:46:25.402  INFO 11668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-26 17:46:25.402  INFO 11668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 716 ms
+2022-09-26 17:46:25.797  WARN 11668 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.RankingList ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:46:25.853  WARN 11668 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:46:25.867  WARN 11668 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.example.demo.pojo.table.UserTrainInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-09-26 17:46:25.906  INFO 11668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-26 17:46:25.915  INFO 11668 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 1.56 seconds (JVM running for 1.994)
+2022-09-26 17:47:15.179  INFO 11668 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-26 17:47:15.180  INFO 11668 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-26 17:47:15.180  INFO 11668 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
