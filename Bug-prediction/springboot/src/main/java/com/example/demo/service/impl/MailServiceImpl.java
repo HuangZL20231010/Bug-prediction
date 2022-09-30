@@ -97,7 +97,7 @@ public class MailServiceImpl implements MailService {
         redisTemplate.opsForValue().set(key_code,codeStr,60*5,TimeUnit.SECONDS);//验证码有效时间是5分钟
 //        redisTemplate.opsForValue().set(key_times,String.valueOf(times+1),1, TimeUnit.HOURS);//更新最近验证码发送时间
         //发送到用户邮箱
-        String content = "欢迎使用仓库入侵检测系统注册用户,验证码是:"+ codeStr +",有效时间5分钟";
+        String content = "欢迎使用用户软件测试系统:"+ codeStr +",有效时间5分钟";
         sendSimpleMail(email,"注册验证码",content);
         return Global.SUCCESS;
     }
