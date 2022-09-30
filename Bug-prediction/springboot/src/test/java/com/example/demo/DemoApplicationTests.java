@@ -1,9 +1,13 @@
 package com.example.demo;
 
+import com.example.demo.service.impl.FileProcessImpl;
+import com.example.demo.service.impl.LogisticRegressionImpl;
 import com.example.demo.utils.MatrixOperation;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.ArrayList;
 
 @SpringBootTest
 class DemoApplicationTests {
@@ -13,19 +17,14 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-		Double[][]A={{1.0,2.0,3.0},{1.0,2.0,3.0},{1.0,2.0,3.0}};
-		Double[][]B={{1.0,2.0,3.0},{1.0,2.0,3.0},{1.0,2.0,3.0}};
-		Double[][]result1=MatrixOperation.add(A,B);
-		Double[][]result2=MatrixOperation.minus(A,B);
-		Double[][]result3=MatrixOperation.iloc(A,1,1,2,2);
-		Double[][]result4=MatrixOperation.iloc(A,2,2,1,1);
-		Double[][]result5=MatrixOperation.matrixMatmul(A,B);
-		Double[][]result6=MatrixOperation.trans(A);
-		Double result7=MatrixOperation.sum(A);
-		Double result8=MatrixOperation.mean(A);
-		Double result9=MatrixOperation.sum_column(A,0);
-		Double result10=MatrixOperation.mean_column(A,0);
-		Double[][]result11=MatrixOperation.multi(A,B);
+		LogisticRegressionImpl logisticRegression=new LogisticRegressionImpl(false,61);
+		ArrayList<ArrayList<Double>> origin_data= FileProcessImpl.read_csv("src/main/resources/static/JDT.csv",true);
+		ArrayList<ArrayList<Double>> all_features=MatrixOperation.converse(MatrixOperation.iloc(origin_data,0,0,origin_data.size()-1,origin_data.get(0).size()-2),true);
+		ArrayList<ArrayList<Double>> all_labels=MatrixOperation.iloc(origin_data,0,origin_data.get(0).size()-1,origin_data.size()-1,origin_data.get(0).size()-1);
+		logisticRegression.train(all_features,all_labels,100,10,0.1);
+		ArrayList<ArrayList<Double>> result=logisticRegression.forward(all_features);
+		Double acc=logisticRegression.evaluate(result,all_labels);
+		System.out.println(acc);
 	}
 
 }
