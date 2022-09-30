@@ -1,0 +1,114 @@
+<changelist name="在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]" date="1664548835934" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/shelved.patch" />
+  <option name="DESCRIPTION" value="在进行更新之前于 2022/9/30 22:40 取消提交了变更 [变更]" />
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/UserService.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/UserService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/UserService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/common/MybatisPlusConfig.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/common/MybatisPlusConfig.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/MybatisPlusConfig.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/UserTrainInfo.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/UserTrainInfo.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/UserTrainInfo.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/RankingListService.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/RankingListService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/RankingListService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/UserTrainInfoServiceImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/mapper/UserMapper.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/mapper/UserMapper.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/UserMapper.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/mapper/RankingListMapper.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/mapper/RankingListMapper.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/RankingListMapper.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/mapper/UserTrainInfoMapper.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/mapper/UserTrainInfoMapper.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/UserTrainInfoMapper.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/impl/MailServiceImpl.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/impl/MailServiceImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/MailServiceImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/impl/RankingListServiceImpl.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/impl/RankingListServiceImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/RankingListServiceImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/User.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/User.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/User.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/common/Result.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/common/Result.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/Result.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/MailService.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/MailService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/MailService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/common/RedisConfig.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/common/RedisConfig.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/RedisConfig.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/UserTrainInfoService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/common/URLConfig.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/common/URLConfig.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/URLConfig.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/RankingList.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/RankingList.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/RankingList.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/DemoApplication.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/DemoApplication.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/DemoApplication.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/UserServiceImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/utils/Global.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/utils/Global.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/Global.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/utils/MatrixOperation.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/utils/MatrixOperation.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/MatrixOperation.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/controller/MailController.class" />
+    <option name="AFTER_PATH" value="Bug-prediction/springboot/target/classes/com/example/demo/controller/MailController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_30_22_40_取消提交了变更_[变更]/MailController.class" />
+  </binary>
+</changelist>
