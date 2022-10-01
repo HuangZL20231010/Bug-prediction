@@ -31,7 +31,7 @@
 				</div>
 				<div class="small-contain" key="smallContainLogin" v-else>
 					<div class="stitle">欢迎回来!</div>
-					<p class="scontent">与我们保持联系，请登录你的账户</p>
+					<p class="scontent">登录测试你的软件吧~</p>
 					<button class="sbutton" @click="changeType">登录</button>
 				</div>
 			</div>
@@ -76,7 +76,7 @@
 					.then( res => {
 						switch(res.data){
 							case 0: 
-								alert("登陆成功！");
+								alert("登录成功！");
 								break;
 							case -1:
 								this.emailError = true;
