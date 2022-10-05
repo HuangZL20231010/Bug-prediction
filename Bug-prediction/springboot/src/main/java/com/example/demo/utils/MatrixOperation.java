@@ -488,13 +488,13 @@ public class MatrixOperation {
 
 
     //数据处理，原始数据转换成Double[][]矩阵，dataProcess如果为真则将数据归一化
-    public static Double[][] conversetoDouble(ArrayList<ArrayList<Double>>origin_matrix,Boolean dataProcess){
+    public static double[][] conversetoDouble(ArrayList<ArrayList<Double>>origin_matrix,Boolean dataProcess){
         int m=origin_matrix.size();
         if(m==0){
             return null;
         }
         int n=origin_matrix.get(0).size();
-        Double[][]result=new Double[m][n];
+        double[][]result=new double[m][n];
         if(dataProcess==false){
             for(int i=0;i<origin_matrix.size();i++){
                 for(int j=0;j<origin_matrix.get(0).size();j++){
