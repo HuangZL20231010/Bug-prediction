@@ -8,7 +8,12 @@ import loginRegister from "@/views/LoginRegister";
 
 const routes = [
   {
-    path: '/',
+    path:'/',
+    name:"登录注册",
+    component: loginRegister
+  },
+  {
+    path: '/navigation1',
     name: '模型',
     component: IndexView,
     redirect:"/downloadView",
@@ -26,7 +31,7 @@ const routes = [
     ]
   },
   {
-    path: '/navigation',
+    path: '/navigation2',
     name: '数据',
     component: IndexView,
     children:[
@@ -42,11 +47,6 @@ const routes = [
       }
     ]
   },
-  {
-    path:'/loginRegister',
-    name:'登录注册',
-    component: loginRegister,
-  }
 ]
 
 const router = createRouter({

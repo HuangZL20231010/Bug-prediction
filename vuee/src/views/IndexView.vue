@@ -11,9 +11,8 @@
             /></el-icon>
             <template #dropdown>
               <el-dropdown-menu>
-                <el-dropdown-item>View</el-dropdown-item>
-                <el-dropdown-item>Add</el-dropdown-item>
-                <el-dropdown-item>Delete</el-dropdown-item>
+                <el-dropdown-item @click="gotoLogin">退出登录</el-dropdown-item>
+                <el-dropdown-item>修改信息</el-dropdown-item>
               </el-dropdown-menu>
             </template>
           </el-dropdown>
@@ -27,27 +26,24 @@
       <el-container  class="layout-container-demo">
         <el-aside width="200px">
           <el-scrollbar>
-<!--            <el-menu :default-openeds="['1', '2']">-->
-<!--              <el-sub-menu index="1">-->
-<!--                <template #title>-->
-<!--                  Navigator One-->
-<!--                </template>-->
-<!--                <el-menu-item-group>-->
-<!--                  <el-menu-item index="1-1">Option 1</el-menu-item>-->
-<!--                  <el-menu-item index="1-2">Option 2</el-menu-item>-->
-<!--                </el-menu-item-group>-->
+            <el-menu router :default-openeds="['1']">
+<!--              <el-sub-menu v-for="(item1,index1) in $router.options.routes" :index="index1+''">-->
+<!--                <template #title>{{item1.name}}</template>-->
+<!--                <el-menu-item v-for="(item2,index2) in item1.children" :index="item2.path" :class="$route.path==item2.path?'is-active':''">-->
+<!--                  {{item2.name}}-->
+<!--                </el-menu-item>-->
 <!--              </el-sub-menu>-->
-<!--            </el-menu>-->
-            <el-menu router :default-openeds="['0','1']">
-              <el-sub-menu v-for="(item1,index1) in $router.options.routes" :index="index1+''">
-                <template #title>
-                  {{item1.name}}
-                </template>
-                <el-menu-item v-for="(item2,index2) in item1.children" :index="item2.path" :class="$route.path==item2.path?'is-active':''">
-                  {{item2.name}}
-                </el-menu-item>
-
+              <el-sub-menu index="1">
+                <template #title>模型</template>
+                <el-menu-item index="/downloadView" class="$route.path==‘/downloadView’?'is-active':''">下载</el-menu-item>
+                <el-menu-item index="/modelTrainView" class="$route.path==‘/modelTrainView’?'is-active':''">训练</el-menu-item>
               </el-sub-menu>
+              <el-sub-menu index="2">
+                <template #title>数据</template>
+                <el-menu-item index="/historyDataView" class="$route.path==‘/historyDataView’?'is-active':''">历史数据</el-menu-item>
+                <el-menu-item index="/rankingView" class="$route.path==‘/rankingView’?'is-active':''">排行榜</el-menu-item>
+              </el-sub-menu>
+
             </el-menu>
           </el-scrollbar>
         </el-aside>
@@ -68,11 +64,56 @@
 </template>
 
 <script>
-export default {
-  name: "index"
-}
+  export default {
+    name: "index",
+    data(){
+      return{
+
+      }
+    },
+    methods:{
+      gotoLogin(){
+        this.$router.push('/');
+      }
+    }
+  }
 </script>
 
+<!--<style>-->
+<!--.el-header, .el-footer {-->
+<!--  background-color: #B3C0D1;-->
+<!--  color: #333;-->
+<!--  text-align: center;-->
+<!--  line-height: 60px;-->
+<!--}-->
+
+<!--.el-aside {-->
+<!--  background-color: #D3DCE6;-->
+<!--  color: #333;-->
+<!--  text-align: center;-->
+<!--  line-height: 200px;-->
+<!--}-->
+
+<!--.el-main {-->
+<!--  background-color: #E9EEF3;-->
+<!--  color: #333;-->
+<!--  text-align: center;-->
+<!--  line-height: 160px;-->
+<!--}-->
+
+<!--body > .el-container {-->
+<!--  margin-bottom: 40px;-->
+<!--}-->
+
+<!--.el-container:nth-child(5) .el-aside,-->
+<!--.el-container:nth-child(6) .el-aside {-->
+<!--  line-height: 260px;-->
+<!--}-->
+
+<!--.el-container:nth-child(7) .el-aside {-->
+<!--  line-height: 320px;-->
+<!--}-->
+<!--</style>-->
 
 <style scoped>
 .layout-container-demo .el-header {
