@@ -1,9 +1,11 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.utils.MatrixOperation;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Random;
+
 
 public class LogisticRegressionImpl {
 

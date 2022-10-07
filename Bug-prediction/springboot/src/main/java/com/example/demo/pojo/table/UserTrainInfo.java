@@ -16,7 +16,7 @@ public class UserTrainInfo {
 
     Date time;
 
-    Float score;
+    Double score;
 
     String detail;
 
@@ -32,7 +32,7 @@ public class UserTrainInfo {
         return time;
     }
 
-    public Float getScore() {
+    public Double getScore() {
         return score;
     }
 
@@ -56,7 +56,7 @@ public class UserTrainInfo {
         this.model = model;
     }
 
-    public void setScore(Float score) {
+    public void setScore(Double score) {
         this.score = score;
     }
 
