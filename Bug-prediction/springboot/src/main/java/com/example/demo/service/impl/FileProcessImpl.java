@@ -1,8 +1,10 @@
 package com.example.demo.service.impl;
 
+import org.springframework.stereotype.Service;
 import java.io.*;
 import java.util.ArrayList;
 
+@Service
 public class FileProcessImpl {
     //读取数据集,返回数据集的所有信息(特征+标签)
     // head=true表示文件包含标题，head=false表示文件不包含标题
