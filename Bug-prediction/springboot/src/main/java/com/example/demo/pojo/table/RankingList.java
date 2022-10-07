@@ -12,13 +12,13 @@ public class RankingList {
 
     Integer rank;
 
-    Integer maxscore;
+    Double maxscore;
 
     public Integer getRank() {
         return rank;
     }
 
-    public Integer getMaxscore() {
+    public Double getMaxscore() {
         return maxscore;
     }
 
@@ -34,7 +34,7 @@ public class RankingList {
         this.rank = rank;
     }
 
-    public void setMaxscore(Integer maxscore) {
+    public void setMaxscore(Double maxscore) {
         this.maxscore = maxscore;
     }
 

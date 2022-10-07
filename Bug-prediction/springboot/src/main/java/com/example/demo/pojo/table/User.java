@@ -14,6 +14,8 @@ public class User {
 
     String password;
 
+    String email;
+
     public void setUserid(Integer userid) {
         this.userid = userid;
     }
@@ -38,5 +40,11 @@ public class User {
         this.username = username;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
