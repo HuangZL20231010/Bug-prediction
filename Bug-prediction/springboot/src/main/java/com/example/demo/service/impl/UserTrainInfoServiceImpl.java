@@ -19,9 +19,17 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
         String fileName = file.getOriginalFilename();
 
         File dest = new File(Global.resourcesPath + "uploadFiles/" + fileName);
-        if (!dest.getParentFile().exists()) {
-            dest.getParentFile().mkdirs();
+
+        if (!dest.exists()) {
+            try {
+                if (!dest.createNewFile()) {
+                    return false;
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
+
         try {
             file.transferTo(dest); // 保存文件
             return true;
@@ -41,10 +49,15 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
         ArrayList<ArrayList<Double>> result=logisticRegression.predict(all_features);
 
         /* 将训练结果存到本地 */
-        String destinationPath = Global.resourcesPath + "/predictionFiles/result_" + fileName;
+        String destinationPath = Global.resourcesPath + "predictionFiles/result_" + fileName;
         File file=new File(destinationPath);
+
         try {
-            file.createNewFile();
+            if (!file.exists()) {
+                if (!file.createNewFile()) {
+                    return "Error";
+                }
+            }
             FileWriter fw = new FileWriter(file);
             BufferedWriter bw=new BufferedWriter(fw);
             int i, j;

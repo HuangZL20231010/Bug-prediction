@@ -71,8 +71,8 @@ export default {
 
 
     axios.post('http://localhost:9090/prediction/systemPrediction', fileFormData).then((res) => {
-      console.log('连接到后端了')
-      if (res.data && res.data.code === 0) {
+      console.log(res)
+      if (res.data) {
         this.$message({
           message: '操作成功',
           type: 'success',
@@ -93,9 +93,6 @@ export default {
   }
 }
 </script>
-
-
-
 
 
 <style scoped>
