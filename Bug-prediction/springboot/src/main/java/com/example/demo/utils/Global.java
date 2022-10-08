@@ -11,5 +11,5 @@ public class Global {
     public static final int FIND = 0; //找回
 
     /* 项目resources路径,自己改成自己电脑上本项目的路径 */
-    public static final String resourcesPath = "D:/ShiXun/Bug-prediction/springboot/src/main/resources/static/";
+    public static final String resourcesPath = "C:/Users/Hzl/Desktop/ShiXun/Bug-prediction/springboot/src/main/resources/static/";
 }

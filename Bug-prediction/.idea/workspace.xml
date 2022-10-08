@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cc6300c-778b-473b-9dc0-1d9046792106" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/utils/MatrixOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/utils/MatrixOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+    <list default="true" id="1cc6300c-778b-473b-9dc0-1d9046792106" name="Default Changelist" comment="解决了跨域问题">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/utils/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/utils/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/DemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/common/MybatisPlusConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/common/MybatisPlusConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/common/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/common/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/common/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/common/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/common/URLConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/common/URLConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/MailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/MailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/mapper/RankingListMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/mapper/RankingListMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/mapper/UserTrainInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/mapper/UserTrainInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/RankingList.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/RankingList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/UserTrainInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/UserTrainInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/MailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/RankingListService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/RankingListService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/FileProcessImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/FileProcessImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/MailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/MailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/RankingListServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/RankingListServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/utils/Global.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/utils/Global.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/utils/MatrixOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/utils/MatrixOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/views/HistoryDataView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/HistoryDataView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/views/LoginRegister.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/LoginRegister.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/views/ModelTrainView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/ModelTrainView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,41 +70,56 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2FUYgBPg74PcibDYVwgy67sjLUF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="1" id="添加" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1664526504214" />
-    <property name="last_opened_file_path" value="D:/MyHelloProject2" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hzl/Desktop/ShiXun/bug/Bug-prediction&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fe01ce2a7fbac8fafaed7c982a04e229&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\FUBOFENG\Desktop\实训1\Bug-prediction\springboot\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.config" />
       <recent name="com.example.demo.controller" />
       <recent name="com.example.demo.utils" />
       <recent name="com.example.demo.service.impl" />
       <recent name="com.example.demo.service" />
-      <recent name="com.example.demo.common" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\FUBOFENG\Desktop\实训1\Bug-prediction\springboot\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DemoApplicationTests">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
     <configuration name="DemoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -101,9 +150,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.DemoApplicationTests" />
       <item itemvalue="Spring Boot.PeopleApplication" />
       <item itemvalue="Spring Boot.DemoApplication" />
-      <item itemvalue="JUnit.DemoApplicationTests" />
     </list>
     <recent_temporary>
       <list>
@@ -111,6 +160,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -128,17 +178,53 @@
       <workItem from="1664448011642" duration="1863000" />
       <workItem from="1664524590371" duration="1961000" />
       <workItem from="1664548241580" duration="454000" />
+      <workItem from="1665142490978" duration="1980000" />
+      <workItem from="1665145280515" duration="5009000" />
+      <workItem from="1665194512517" duration="268000" />
+      <workItem from="1665199769082" duration="3875000" />
     </task>
+    <task id="LOCAL-00001" summary="解决了跨域问题">
+      <created>1665213389723</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665213389724</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1664548398958">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1664548398958" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="解决了跨域问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决了跨域问题" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java</url>
+          <line>21</line>
+          <properties class="com.example.demo.controller.PredictionController" method="upload">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>
