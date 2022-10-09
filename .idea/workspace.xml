@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/7 14:53 wj 系统预测后端部分">
+    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/7 14:53 wj 系统预测后端部分更新">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/FileProcessImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/FileProcessImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.DemoApplicationTests.contextLoads">
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
     <configuration name="DemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -116,7 +115,10 @@
       <updated>1664548207267</updated>
       <workItem from="1664548209853" duration="32000" />
       <workItem from="1665017350521" duration="2602000" />
-      <workItem from="1665105025731" duration="12855000" />
+      <workItem from="1665105025731" duration="14193000" />
+      <workItem from="1665144877649" duration="1370000" />
+      <workItem from="1665191886924" duration="2640000" />
+      <workItem from="1665278341260" duration="2257000" />
     </task>
     <task id="LOCAL-00001" summary="2022/9/30 22:44">
       <created>1664549054890</created>
@@ -139,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665125698767</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2022/10/7 14:53 wj 系统预测后端部分更新">
+      <created>1665126219101</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665126219101</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +169,7 @@
     <MESSAGE value="2022/9/30 22:44" />
     <MESSAGE value="2022/10/6 10:00 wj 数据库表更新" />
     <MESSAGE value="2022/10/7 14:53 wj 系统预测后端部分" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/10/7 14:53 wj 系统预测后端部分" />
+    <MESSAGE value="2022/10/7 14:53 wj 系统预测后端部分更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/10/7 14:53 wj 系统预测后端部分更新" />
   </component>
 </project>
