@@ -2,12 +2,15 @@
   <library name="Maven: com.baomidou:mybatis-plus-generator:3.5.3">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.5.3/mybatis-plus-generator-3.5.3.jar!/" />
+      <root url="jar://D:/java/jdk 11.0.11/lib/jrt-fs.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.5.3/mybatis-plus-generator-3.5.3-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.5.3/mybatis-plus-generator-3.5.3-sources.jar!/" />
+      <root url="file://D:/java/jdk 11.0.11/lib" />
     </SOURCES>
+    <jarDirectory url="file://D:/java/jdk 11.0.11/lib" recursive="false" type="SOURCES" />
   </library>
 </component>
