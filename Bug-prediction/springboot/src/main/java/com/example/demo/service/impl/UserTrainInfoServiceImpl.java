@@ -42,7 +42,7 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
     @Override
     public String systemPrediction(String filePath, String fileName) {
 
-        /* 训练数据 */
+        /* 使用系统逻辑回归模型预测数据 */
         LogisticRegressionImpl logisticRegression=new LogisticRegressionImpl(false,61);
         ArrayList<ArrayList<Double>> origin_data= FileProcessImpl.read_csv(filePath,true);
         ArrayList<ArrayList<Double>> all_features= MatrixOperation.converse(MatrixOperation.iloc(origin_data,0,0,origin_data.size()-1,origin_data.get(0).size()-2),true);
