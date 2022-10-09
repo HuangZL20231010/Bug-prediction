@@ -17,7 +17,7 @@ public class KNNSer implements KNN {
     int length;    // 维度
     int size;      //数据集大小
     int k;         //knn
-    int weight;    //负例的权重
+    double weight;    //负例的权重
     Comparator<Pair<Double, Double>> gc =new Comparator<Pair<Double, Double>>() {
         @Override
         public int compare(Pair<Double, Double> s1, Pair<Double, Double> s2) {
@@ -28,15 +28,21 @@ public class KNNSer implements KNN {
     @Override
     public void init(String file){
         ArrayList<ArrayList<Double>> data = FileProcessImpl.read_csv(file,true);
+        int clean = 0;
+        int buggy = 0;
+        length = data.get(0).size();
         data_test = new ArrayList<>();
         data_train = new ArrayList<>();
         dataset = new ArrayList<>();
         for(int i=0;i<data.size();i++){
             if(i%5==0) data_test.add(data.get(i));
             if(i%5!=0) data_train.add(data.get(i));
+            if(data.get(i).get(length-1)==1.0) buggy++;
+            if(data.get(i).get(length-1)==0.0) clean++;
         }
-        k=5;
-        weight = 1;
+        k=6;
+        weight = (double)clean/buggy;
+        System.out.println("weight:"+weight);
         length = data_train.get(0).size();
         size = data_train.size();
         System.out.println("初始化已完成 训练集："+size+"*"+length+"  测试集："+data_test.size()+"*"+length);
@@ -44,7 +50,7 @@ public class KNNSer implements KNN {
     }
 
     @Override
-    public void init(String file, int ku, int weightu) {
+    public void init(String file, int ku, double weightu) {
         ArrayList<ArrayList<Double>> data = FileProcessImpl.read_csv(file,true);
         data_test = new ArrayList<>();
         data_train = new ArrayList<>();
@@ -73,8 +79,8 @@ public class KNNSer implements KNN {
     @Override
     public int knn(ArrayList<Double> newdata, int k) {
         if(k>=data_test.size()) return 0;
-        int clean=0;
-        int buggy=0;
+        double clean=0;
+        double buggy=0;
         for(int i=0;i<size;i++){
             double res = calDistance(data_train.get(i),newdata);
             Pair<Double, Double> pair = Pair.of(res,data_train.get(i).get(length-1));

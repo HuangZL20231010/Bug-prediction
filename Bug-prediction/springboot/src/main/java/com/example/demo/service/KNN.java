@@ -9,5 +9,5 @@ public interface KNN {
     double precise(); // 无权重预测
     int knn(ArrayList<Double> newdata, int k);
     void init(String file); //默认构造，k=5，weight = 1
-    void init(String file,int ku,int weightu);
+    void init(String file,int ku,double weightu);
 }
