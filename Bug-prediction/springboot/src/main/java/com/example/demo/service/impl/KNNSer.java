@@ -13,7 +13,7 @@ public class KNNSer implements KNN {
 
     ArrayList<Pair<Double, Double>> dataset; // 新点到各点的距离,和各点的类别
     ArrayList<ArrayList<Double>> data_train; // 数据集;
-    ArrayList<ArrayList<Double>> data_test;
+    ArrayList<ArrayList<Double>> data_test;  // 测试集
     int length;    // 维度
     int size;      //数据集大小
     int k;         //knn
@@ -40,8 +40,12 @@ public class KNNSer implements KNN {
             if(data.get(i).get(length-1)==1.0) buggy++;
             if(data.get(i).get(length-1)==0.0) clean++;
         }
-        k=6;
-        weight = (double)clean/buggy;
+        data_test = dataProcess(data_test);
+        data_train = dataProcess(data_train);
+        System.out.println("数据归一化成功");
+        k=45;
+        weight = 2.0*(double)clean/buggy;
+//        weight = 100.0;
         System.out.println("weight:"+weight);
         length = data_train.get(0).size();
         size = data_train.size();
@@ -68,6 +72,52 @@ public class KNNSer implements KNN {
     }
 
     @Override
+    public ArrayList<Integer> predictFile(String file) {
+        ArrayList<ArrayList<Double>> data = FileProcessImpl.read_csv(file,true);
+        if(data.get(0).size()!=length-1) return null; //用户输入的数据集和测试集除标签外的维度不匹配
+        ArrayList<Integer> result = new ArrayList<>();
+        for(int i=0;i<data.size();i++){
+            result.add(knn(data.get(i),k));
+        }
+
+        return result;
+    }
+
+    @Override
+    public ArrayList<ArrayList<Double>> dataProcess(ArrayList<ArrayList<Double>> data) {
+        int len = data.get(0).size(); // 数据维度
+        int size = data.size();       // 数据量
+        ArrayList<Double> maxmin = new ArrayList<>();
+        for(int i=0;i<len;i++){
+            double min = data.get(0).get(i);
+            double max = min;
+            for(int j=0;j<size;j++){
+                double tem = data.get(j).get(i);
+                if(tem>max) max = tem;
+                if(tem<min) min = tem;
+            }
+            maxmin.add(min);
+            maxmin.add(max);
+        }
+        // 取得了每个维度的数据的最大值和最小值
+        // 第j个维度的最小值是2j-2 最大值是2j-1
+        for(int i=0;i<size;i++){  // 第i个数据
+            ArrayList<Double> temdata = data.get(i);
+            for(int j=0;j<len;j++){ //第j个维度
+                double temm = maxmin.get(2*j+1) - maxmin.get(2*j); //第j个维度的最大值和最小值之差
+                if(temm ==0){  //最大值等于最小值
+                    temdata.set(j,0.0);
+                }
+                else {
+                    temdata.set(j,(temdata.get(j)-maxmin.get(2*j))/temm);
+                }
+            }
+            data.set(i,temdata);
+        }
+        return data;
+    }
+
+    @Override
     public double calDistance(ArrayList<Double> data1, ArrayList<Double> data2) {
         double result = 0;
         for (int i=0;i<data1.size()-1;i++){ // 除最后一列的标签外的权重
@@ -78,6 +128,7 @@ public class KNNSer implements KNN {
 
     @Override
     public int knn(ArrayList<Double> newdata, int k) {
+        System.out.println("------------");
         if(k>=data_test.size()) return 0;
         double clean=0;
         double buggy=0;
@@ -92,9 +143,13 @@ public class KNNSer implements KNN {
             double tem = dataset.get(i).getSecond();
 //            System.out.println("第"+i+"个dataset的种类:"+tem);
             if(tem==0.0) clean++;
-            if(tem==1.0) buggy+= weight;
+            if(tem==1.0) {
+                System.out.println("第"+i+"个点"+"事buggy数据");
+                buggy+= weight;
+            }
         }
 //        System.out.print("clean:"+clean+"   buggy:"+buggy);
+        System.out.println("------------");
         if(clean>buggy) return 1;
         else if(clean<buggy) return 0;
         return knn(newdata,k+1);
@@ -122,10 +177,17 @@ public class KNNSer implements KNN {
         return tp/clean_true;
     }
 
+    public void print(ArrayList<ArrayList<Double>> data){
+        for(int i=0;i<data.size();i++){
+            System.out.println(data.get(i).toString());
+        }
+    }
     public static void main(String[] args){
         KNNSer knnSer = new KNNSer();
         knnSer.init("C:\\Users\\FUBOFENG\\Desktop\\实训1\\Bug-prediction\\springboot\\src\\main\\resources\\static\\JDT.csv");
         System.out.println("准确率："+knnSer.precise());
 //        knnSer.knn(knnSer.data_test.get(187),101);
+//        knnSer.print(knnSer.data_test);
+//        knnSer.print(knnSer.dataProcess(knnSer.data_test));
     }
 }
