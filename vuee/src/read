@@ -1,0 +1,4 @@
+自定义训练
+选择模型（逻辑回归，K近邻）
+逻辑回归超参：轮数（epochnum，int类型）批量数（batchsize，int类型）学习率（double类型）
+K近邻：K（int类型）和权重（double类型）
