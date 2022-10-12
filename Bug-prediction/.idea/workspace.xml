@@ -6,12 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc6300c-778b-473b-9dc0-1d9046792106" name="Default Changelist" comment="解决了跨域问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/utils/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/utils/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/predictionFiles/result_jdt.csv" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/predictionFiles/result_jdt.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/uploadFiles/JDT.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/utils/Global.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/utils/Global.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/views/DownloadView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/SelfTrainView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/views/IndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/IndexView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vuee/src/views/ModelTrainView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/ModelTrainView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +155,10 @@
       <workItem from="1665142490978" duration="1980000" />
       <workItem from="1665145280515" duration="5009000" />
       <workItem from="1665194512517" duration="268000" />
-      <workItem from="1665199769082" duration="6871000" />
+      <workItem from="1665199769082" duration="8734000" />
+      <workItem from="1665284342384" duration="4438000" />
+      <workItem from="1665303584505" duration="618000" />
+      <workItem from="1665404896122" duration="2538000" />
     </task>
     <task id="LOCAL-00001" summary="解决了跨域问题">
       <created>1665213389723</created>

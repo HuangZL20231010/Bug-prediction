@@ -1,21 +1,46 @@
 <template>
-  <div style="background-color: #f2f3f5;height: 90vh">
+  <div style="background-color: #f2f3f5;height: 380vh">
     <div class="father">
-      <div class="modelChoose" v-if="!isAlreadUpload">
-        <el-select v-model="modelName"
-                   clearable size="large"
-                   style="margin-top: 10px"
-                   placeholder="请选择模型">
-          <el-option
-              v-for="item in options"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value">
-          </el-option>
-        </el-select>
-      </div>
-
       <div class="upLoadArea" v-if="!isAlreadUpload">
+        <div class="modelChoose" v-if="!isAlreadUpload" >
+          <div id="select">
+            <el-select v-model="modelName"
+                       clearable size="large"
+                       placeholder="请选择模型"
+                       @change="handleChange"
+                       >
+              <el-option
+                  v-for="item in options"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value">
+              </el-option>
+            </el-select>
+          </div>
+
+          <div id="LogicalCaoCan">
+            <el-form-item label="轮次数">
+              <el-input-number v-model="epochNum" :max="100" :min="0"  :disabled="!chooseLogical"/>
+            </el-form-item>
+            <el-form-item label="批量数">
+              <el-input-number v-model="batchSize"  :step="1" :max="100" :min="0"  :disabled="!chooseLogical"/>
+            </el-form-item>
+            <el-form-item label="学习率"  >
+              <el-input-number v-model="alpha" :precision="3" :step="0.1" :max="10" :min="0" :disabled="!chooseLogical"/>
+            </el-form-item>
+          </div>
+
+          <div id="KCaoCan">
+            <el-form-item label="K 值">
+              <el-input-number v-model="KValue" :max="100" :min="0" :disabled="!chooseK"/>
+            </el-form-item>
+            <el-form-item label="权重">
+              <el-input-number v-model="wise"  :precision="3" :step="0.1" :max="10" :min="0" :disabled="!chooseK"/>
+            </el-form-item>
+          </div>
+
+<!--          <div style="margin-top: 10px">超参选择表单  </div>-->
+        </div>
         <el-upload
             class="upload-demo"
             ref="upload"
@@ -24,7 +49,7 @@
             :file-list="fileList"
             :before-upload="beforeUpload"
         >
-          <div class="buttondiv">
+          <div class="buttondiv" style="top:40%;width: auto">
             <el-button type="primary" style="height: 200px;width: 200px;border-radius: 50%;" slot="trigger">
               <el-icon style="vertical-align: middle"><Search /></el-icon>
               <span style="vertical-align: middle;font-size: 20px"> 上传文件 </span>
@@ -34,18 +59,27 @@
         <div slot="tip" class="tip">只能上传csv文件</div>
       </div>
 
-      <div class="successArea" v-if="isAlreadUpload">
-        <!--          <div slot="tip" class="file-name">fileName</div>-->
-        <el-result
-            icon="success"
-            title="上传成功"
-            sub-title="点击下载结果"
-        >
-          <template #extra>
-            <el-button type="primary" @click="importTemplate">获取结果</el-button>
-          </template>
-        </el-result>
+      <div class="dowloadArea" v-if="!isAlreadDowload">
+        <div class="buttondiv">
+          <el-button type="primary"
+                     style="height: 200px;width: 200px;border-radius: 50%;margin-right: 5vw"
+                     @click="downLoadTestSet" >
+            <el-icon style="vertical-align: middle"><Search /></el-icon>
+            <span style="vertical-align: middle;font-size: 20px"> 下载测试集 </span>
+          </el-button>
+
+          <el-button type="primary"
+                     style="height: 200px;width: 200px;border-radius: 50%;margin-left: 5vw"
+                     @click="upLoadTestSet" >
+            <el-icon style="vertical-align: middle"><Search /></el-icon>
+            <span style="vertical-align: middle;font-size: 20px"> 上传测试集 </span>
+          </el-button>
+        </div>
+        <div>
+          <div slot="tip" class="tip" style="top: 80%">注释</div>
+        </div>
       </div>
+
     </div>
   </div>
 
@@ -55,14 +89,14 @@
 import axios from "axios";
 
 export default {
-  name: "DownloadView",
+  name: "selfTrainView",
   data() {
     return {
       options: [{
-        value: '选项1',
+        value: '逻辑回归',
         label: '逻辑回归'
       }, {
-        value: '选项2',
+        value: 'K近邻',
         label: 'K近邻'
       }],
 
@@ -71,11 +105,31 @@ export default {
       fileName:'',
       filePath:'',
       isAlreadUpload:false,
+      epochNum:'5',
+      batchSize:'1',
+      alpha:'',
+      KValue:'',
+      wise:'',
 
+      chooseLogical:false,
+      chooseK:false,
     }
   },
 
   methods:{
+    handleChange(val){
+      console.log(val);
+      if(val=='逻辑回归'){
+        this.chooseLogical=true;
+        this.chooseK=false;
+      }else if(val=='K近邻'){
+        this.chooseLogical=false;
+        this.chooseK=true;
+      }else{
+        this.chooseLogical=false;
+        this.chooseK=false;
+      }
+    },
     beforeUpload(file){
       this.files = file;
       const extension3 = file.name.split('.')[1] === 'csv'
@@ -154,7 +208,7 @@ export default {
 <style scoped>
 .father{
   width: 80%;
-  height: 650px;
+  height: 250vh;
   margin-left: 10%;
   margin-top: 15px;
   background-color: #c9ebf6;
@@ -165,29 +219,22 @@ export default {
   box-shadow: darkgrey 0px 0px 20px 5px;
 }
 
-.modelChoose{
-  /*background-color: #409dfd;*/
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  margin-top: 5%;
-}
-
-.upLoadArea{
+.dowloadArea{
   /*background-color: #ee0e0e;*/
   position: relative;
   width: 80%;
-  height: 65%;
+  height: 50vh;
   margin-left: 10%;
-  margin-top: 180px;
+  top: 20vh;
 
   border-radius: 30px;
   border:2px dashed darkgray;
 }
 
+
 .buttondiv{
   /*background: aquamarine;*/
-  width: auto;
+  width: 100%;
   height: auto;
 
   position: absolute;
@@ -195,16 +242,60 @@ export default {
 }
 
 
+
+
+.upLoadArea{
+  /*background-color: #cb7878;*/
+  position: relative;
+  width: 80%;
+  height: 70vh;
+  margin-left: 10%;
+  top: 10vh;
+
+  border-radius: 30px;
+  border:2px dashed darkgray;
+}
+
+.modelChoose{
+  /*background-color: #409dfd;*/
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+}
+
 .tip{
   /*background: #409dfd;*/
   width: 100%;
   height: auto;
   position: absolute;
-  top: 70%;
+  top: 80%;
 
   font-size: 12px;
   color: #5e6673;
 }
+
+#select{
+  /*background-color: #d91616;*/
+  margin-top: 6vh;
+  margin-right: 3vw;
+}
+
+#LogicalCaoCan{
+  /*background: #861bbe;*/
+  margin-right: 2vw;
+}
+
+#KCaoCan{
+  /*background-color: #861bbe;*/
+  margin-top: 3vh;
+  /*display: flex; !**!*/
+  /*justify-content: center; !*水平居中*!*/
+  align-items: Center; /*垂直居中*/
+}
+
 .file-name{
   /*font-size: 15px;*/
   position: absolute;
@@ -219,3 +310,5 @@ export default {
   top:15%;
 }
 </style>
+
+

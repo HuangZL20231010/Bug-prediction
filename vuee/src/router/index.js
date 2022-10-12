@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import IndexView from "../views/IndexView.vue";
-import DownloadView from "@/views/DownloadView";
+import selfTrainView from "@/views/SelfTrainView";
 import modelTrainView from "@/views/ModelTrainView";
 import historyDataView from "@/views/HistoryDataView";
 import rankingView from "@/views/RankingView";
@@ -19,13 +19,13 @@ const routes = [
     redirect:"/downloadView",
     children:[
       {
-        path: '/downloadView',
-        name: '下载',
-        component: DownloadView,
+        path: '/selfTrainView',
+        name: '自定义',
+        component: selfTrainView,
       },
       {
         path: '/modelTrainView',
-        name: '训练',
+        name: '指定',
         component: modelTrainView,
       }
     ]
