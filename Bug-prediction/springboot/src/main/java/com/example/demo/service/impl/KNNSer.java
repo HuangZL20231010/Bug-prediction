@@ -2,13 +2,14 @@ package com.example.demo.service.impl;
 
 import com.example.demo.service.KNN;
 import org.springframework.data.util.Pair;
+import org.springframework.stereotype.Service;
 
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-
+@Service
 public class KNNSer implements KNN {
 
     ArrayList<Pair<Double, Double>> dataset; // 新点到各点的距离,和各点的类别
@@ -182,6 +183,17 @@ public class KNNSer implements KNN {
             System.out.println(data.get(i).toString());
         }
     }
+
+    // 传入用户上传的csv文件的绝对路径，返回训练后的二维数组
+    public ArrayList<ArrayList<Double>> systemPrediction(String filePath) {
+        return null;
+    }
+
+    // 传入用户上传的csv文件的绝对路径，返回准确率(该项只用于用户自定义训练部分)
+    public Double systemPredictionAccuracy(String filePath) {
+        return null;
+    }
+
     public static void main(String[] args){
         KNNSer knnSer = new KNNSer();
         knnSer.init("C:\\Users\\FUBOFENG\\Desktop\\实训1\\Bug-prediction\\springboot\\src\\main\\resources\\static\\JDT.csv");

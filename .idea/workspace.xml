@@ -4,9 +4,90 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/7 14:53 wj 系统预测后端部分更新">
+    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/9 9:57 wj 系统预测后端文件传输接口">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_jniloader_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_core_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_native_ref_java_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_native_system_java_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_linux_armhf_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_linux_i686_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_linux_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_osx_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_win_i686_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_win_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_linux_armhf_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_linux_i686_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_linux_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_osx_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_win_i686_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_win_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fracpete_jclipboardhelper_0_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fracpete_jfilechooser_bookmarks_0_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vbmacher_java_cup_11b_20160615.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vbmacher_java_cup_runtime_11b_20160615.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_matrix_toolkits_java_mtj_1_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_netlib_java_netlib_java_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_f2j_arpack_combined_all_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_ac_waikato_cms_weka_thirdparty_bounce_0_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_ac_waikato_cms_weka_weka_stable_3_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/RankController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/MailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/mapper/RankingListMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/mapper/UserTrainInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/pojo/table/RankingList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/pojo/table/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/pojo/table/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/pojo/table/UserTrainInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/KNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/KNN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/RankingListService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/KNNSer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/KNNSer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/RankingListServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/utils/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/utils/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/DemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/common/MybatisPlusConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/common/MybatisPlusConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/common/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/common/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/common/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/common/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/common/URLConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/common/URLConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/config/CrosConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/config/CrosConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/config/CrosConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/config/CrosConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/controller/MailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/controller/MailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/controller/PredictionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/controller/PredictionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/mapper/RankingListMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/mapper/UserTrainInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/RankingList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/pojo/table/UserTrainInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/KNN.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/KNN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/MailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/RankingListService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/RankingListService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/FileProcessImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/FileProcessImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/KNNSer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/KNNSer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/MailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/MailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/RankingListServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/RankingListServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/SVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/SVM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/utils/Classify.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/utils/Classify.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/utils/Global.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/utils/Global.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/utils/MatrixOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/utils/MatrixOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/utils/SimpleTool.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/utils/SimpleTool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +140,7 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoApplication">
+  <component name="RunManager" selected="JUnit.DemoApplicationTests.contextLoads">
     <configuration name="DemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -118,7 +199,8 @@
       <workItem from="1665105025731" duration="14193000" />
       <workItem from="1665144877649" duration="1370000" />
       <workItem from="1665191886924" duration="2640000" />
-      <workItem from="1665278341260" duration="2257000" />
+      <workItem from="1665278341260" duration="7348000" />
+      <workItem from="1665748945646" duration="11303000" />
     </task>
     <task id="LOCAL-00001" summary="2022/9/30 22:44">
       <created>1664549054890</created>
@@ -148,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665126219101</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2022/10/9 9:57 wj 系统预测后端文件传输接口">
+      <created>1665280670763</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665280670763</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +259,18 @@
     <MESSAGE value="2022/10/6 10:00 wj 数据库表更新" />
     <MESSAGE value="2022/10/7 14:53 wj 系统预测后端部分" />
     <MESSAGE value="2022/10/7 14:53 wj 系统预测后端部分更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/10/7 14:53 wj 系统预测后端部分更新" />
+    <MESSAGE value="2022/10/9 9:57 wj 系统预测后端文件传输接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/10/9 9:57 wj 系统预测后端文件传输接口" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Bug-prediction/springboot/src/test/java/com/example/demo/DemoApplicationTests.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

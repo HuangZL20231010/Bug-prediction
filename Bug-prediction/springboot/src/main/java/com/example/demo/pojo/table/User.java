@@ -8,21 +8,17 @@ import lombok.Data;
 @Data
 public class User {
 
-    Integer userid;
-
     String username;
 
     String password;
 
     String email;
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
-    }
+    Integer trainnums;
 
-    public Integer getUserid() {
-        return userid;
-    }
+    Double maxaccuracy;
+
+    String maxaccuracymodel;
 
     public String getPassword() {
         return password;
@@ -46,5 +42,29 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Integer getTrainnums() {
+        return trainnums;
+    }
+
+    public void setTrainnums(Integer trainnums) {
+        this.trainnums = trainnums;
+    }
+
+    public Double getMaxaccuracy() {
+        return maxaccuracy;
+    }
+
+    public String getMaxaccuracymodel() {
+        return maxaccuracymodel;
+    }
+
+    public void setMaxaccuracy(Double maxaccuracy) {
+        this.maxaccuracy = maxaccuracy;
+    }
+
+    public void setMaxaccuracymodel(String maxaccuracymodel) {
+        this.maxaccuracymodel = maxaccuracymodel;
     }
 }
