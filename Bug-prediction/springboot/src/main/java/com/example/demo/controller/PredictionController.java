@@ -23,6 +23,7 @@ public class PredictionController {
     private UserTrainInfoService userTrainInfoService;
 
     @RequestMapping(value = "/userDefinedPredictionLogistic", method = RequestMethod.POST)
+    @ResponseBody
     public String userDefinedPrediction(@RequestParam("uploadFile")MultipartFile uploadFile,
                                         @RequestParam("model")String model,
                                         @RequestParam("epochNum")Integer epochNum,
