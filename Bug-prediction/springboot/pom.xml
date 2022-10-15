@@ -64,7 +64,11 @@
 			<artifactId>mybatis-plus-generator</artifactId>
 			<version>3.5.3</version>
 		</dependency>
-
+		<dependency>
+			<groupId>nz.ac.waikato.cms.weka</groupId>
+			<artifactId>weka-stable</artifactId>
+			<version>3.8.5</version>
+		</dependency>
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter-test</artifactId>

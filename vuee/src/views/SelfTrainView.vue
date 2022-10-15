@@ -47,7 +47,7 @@
             action="doUpload"
             :limit="1"
             :file-list="fileList"
-            :before-upload="beforeUpload"
+            :before-upload="beforeUpload_train"
         >
           <div class="buttondiv" style="top:40%;width: auto">
             <el-button type="primary" style="height: 200px;width: 200px;border-radius: 50%;" slot="trigger">
@@ -67,6 +67,8 @@
             <el-icon style="vertical-align: middle"><Search /></el-icon>
             <span style="vertical-align: middle;font-size: 20px"> 下载测试集 </span>
           </el-button>
+
+
 
           <el-button type="primary"
                      style="height: 200px;width: 200px;border-radius: 50%;margin-left: 5vw"
@@ -92,6 +94,7 @@ export default {
   name: "selfTrainView",
   data() {
     return {
+      username:'',
       options: [{
         value: '逻辑回归',
         label: '逻辑回归'
@@ -116,6 +119,13 @@ export default {
     }
   },
 
+  created() {
+    // console.log(this.GLOBAL.token)
+
+    console.log("username:"+sessionStorage.getItem('username'));
+    console.log(sessionStorage.getItem('222'));
+  },
+
   methods:{
     handleChange(val){
       console.log(val);
@@ -130,7 +140,8 @@ export default {
         this.chooseK=false;
       }
     },
-    beforeUpload(file){
+
+    beforeUpload_train(file){
       this.files = file;
       const extension3 = file.name.split('.')[1] === 'csv'
       if (!extension3) {
@@ -153,11 +164,15 @@ export default {
       let fileFormData = new FormData();
       fileFormData.append('uploadFile', this.files);//uploadFile是键，files是值，就是要传的文件，test.zip是要传的文件名
       // fileFormData.append('uploadFile', this.files, this.fileName,);//filename是键，file是值，就是要传的文件，test.zip是要传的文件名
-      let requestConfig = {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        },
-      }
+      let modelNO='';
+      if(this.modelName==='选项1')modelNO='1';
+      else modelNO='2';
+      fileFormData.append('model',modelNO);
+      fileFormData.append('epochNum',this.epochNum);
+      fileFormData.append('batchSize',this.batchSize);
+      fileFormData.append('learningrate',this.alpha);
+      fileFormData.append('username',this.username);
+
       const _this=this
       console.log("正在axios")
       axios.post('http://localhost:9090/prediction/systemPrediction', fileFormData).then((res) => {
@@ -181,15 +196,13 @@ export default {
       })
     },
 
-
-    importTemplate() {
+    downLoadTestSet(){
       axios({
-        url: 'http://localhost:9090/prediction/getFile',
+        url: 'http://localhost:9090/prediction/getEvaluateFile',
         method: 'get',
-        params: {filePath: this.filePath},
         responseType: 'arraybuffer'
       }).then(res => {
-        var fileName = "result"
+        var fileName = "TestSet"
         const blob = new Blob([res.data]);
         let a = document.createElement("a"); //创建一个<a></a>标签
         a.href = URL.createObjectURL(blob); // 将流文件写入a标签的href属性值
@@ -199,8 +212,9 @@ export default {
         a.click(); // 模拟点击了a标签，会触发a标签的href的读取，浏览器就会自动下载了
         a.remove(); // 一次性的，用完就删除a标签
       })
+    },
 
-    }
+
   }
 }
 </script>

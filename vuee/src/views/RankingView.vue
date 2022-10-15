@@ -25,13 +25,13 @@
             {{index+1}}
           </div>
           <div class="userName">
-            {{item.userName}}
+            {{item.username}}
           </div>
           <div class="modelChosen">
-            {{item.model}}
+            {{item.maxaccuracymodel}}
           </div>
           <div class="accuracy">
-            {{item.accuracy}}
+            {{item.maxaccuracy}}
           </div>
         </div>
       </div>
@@ -47,60 +47,22 @@ export default {
   name: "rankingView",
   data() {
     return {
-      rankSet:[{
-          userName:'Tony',
-          model:'KNN',
-          accuracy:'95%',
-        },
-        {
-          userName:'啊禹',
-          model:'KNN',
-          accuracy:'93%',
-        },
-        {
-          userName:'潘子',
-          model:'KNN',
-          accuracy:'90%',
-        },
-        {
-          userName:'阿逢',
-          model:'KNN',
-          accuracy:'89%',
-        },
-        {
-          userName:'霖',
-          model:'KNN',
-          accuracy:'87%',
-        },
-        {
-          userName:'陈航',
-          model:'KNN',
-          accuracy:'85%',
-        },
-        {
-          userName:'小阿囧',
-          model:'KNN',
-          accuracy:'83%',
-        },
-        {
-          userName:'小阿囧',
-          model:'逻辑回归',
-          accuracy:'83%',
-        },
-        {
-          userName:'小阿囧',
-          model:'逻辑回归',
-          accuracy:'83%',
-        },
-        {
-          userName:'小阿囧',
-          model:'逻辑回归',
-          accuracy:'83%',
-        },
-      ]
+      rankSet:[]
     }
   },
 
+  created() {
+    axios({
+      url:'http://localhost:9090/rank/orderByAccuracy',
+      method:'get',
+    }).then(res=>{
+      console.log(res.data)
+      this.rankSet=res.data;
+
+    }).catch(err=>{
+      console.log(err);
+    })
+  },
   methods:{
 
   }

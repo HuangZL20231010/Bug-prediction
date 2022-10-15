@@ -1,7 +1,11 @@
 <template>
 	<div class="login-register">
 		<div class="contain">
+
+<!--      主栏-->
 			<div class="big-box" :class="{active:isLogin}">
+
+<!--        登录栏-->
 				<div class="big-contain" key="bigContainLogin" v-if="isLogin">
 					<div class="btitle">账户登录</div>
 					<div class="bform">
@@ -12,6 +16,8 @@
 					</div>
 					<button class="bbutton" @click="login">登录</button>
 				</div>
+
+<!--        注册栏-->
 				<div class="big-contain" key="bigContainRegister" v-else>
 					<div class="btitle">创建账户</div>
 					<div class="bform">
@@ -22,7 +28,10 @@
 					</div>
 					<button class="bbutton" @click="register">注册</button>
 				</div>
+
+
 			</div>
+<!--      侧栏-->
 			<div class="small-box" :class="{active:isLogin}">
 				<div class="small-contain" key="smallContainRegister" v-if="isLogin">
 					<div class="stitle">你好，朋友!</div>
@@ -35,12 +44,15 @@
 					<button class="sbutton" @click="changeType">登录</button>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </template>
 
 <script>
-	export default{
+	import axios from "axios";
+
+  export default{
 		name:'login-register',
 		data(){
 			return {
@@ -65,18 +77,28 @@
 			login() {
 				const self = this;
 				if (self.form.useremail != "" && self.form.userpwd != "") {
-					self.$axios({
-						method:'post',
-						url: 'http://127.0.0.1:9090/api/user/login',
-						data: {
-							email: self.form.useremail,
-							password: self.form.userpwd
-						}
+          // console.log(self.form.useremail)
+
+					axios({
+						method:'get',
+						url: 'http://localhost:9090/email/login',
+            params: {username:self.form.useremail,password:self.form.userpwd },
+
+						// data: {
+						// 	email: self.form.useremail,
+						// 	password: self.form.userpwd
+						// }
 					})
 					.then( res => {
+            console.log(res)
 						switch(res.data){
 							case 0: 
 								alert("登录成功！");
+                let username=res.data.username;
+                // self.$router.push({path:'/selfTrainView',query: {username:username}});
+                self.$router.push({path:'/selfTrainView'});
+                sessionStorage.setItem("username",username);
+
 								break;
 							case -1:
 								this.emailError = true;
@@ -96,9 +118,9 @@
 			register(){
 				const self = this;
 				if(self.form.username != "" && self.form.useremail != "" && self.form.userpwd != ""){
-					self.$axios({
+					axios({
 						method:'post',
-						url: 'http://127.0.0.1:9090/api/user/add',
+						url: 'http://localhost:9090/email/register',
 						data: {
 							username: self.form.username,
 							email: self.form.useremail,

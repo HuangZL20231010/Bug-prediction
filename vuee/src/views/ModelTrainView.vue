@@ -3,7 +3,8 @@
     <div class="father">
       <div class="modelChoose" v-if="!isAlreadUpload">
         <el-select v-model="modelName"
-                   clearable size="large"
+                   clearable
+                   size="large"
                    style="margin-top: 10px"
                    placeholder="请选择模型">
           <el-option
@@ -19,9 +20,8 @@
         <el-upload
             class="upload-demo"
             ref="upload"
-            action="doUpload"
+            :action="doUpload"
             :limit="1"
-            :file-list="fileList"
             :before-upload="beforeUpload"
         >
           <div class="buttondiv">
@@ -55,7 +55,7 @@
 import axios from "axios";
 
 export default {
-  name: "DownloadView",
+  name: "modelTrainView",
   data() {
     return {
       options: [{
@@ -77,17 +77,24 @@ export default {
 
   methods:{
     beforeUpload(file){
+      if(this.modelName===''){
+        alert('请先选择模型，再上传文件！');
+        return;
+      }
       this.files = file;
-      const extension3 = file.name.split('.')[1] === 'csv'
-      if (!extension3) {
+      const extension = file.name.split('.')[1] === 'csv'
+      if (!extension) {
         this.$message.warning('上传模板只能是csv格式!')
         return
       }
       this.fileName = file.name;
-      console.log(this.fileName)
+      // console.log(this.fileName)
       this.submitUpload();
     },
 
+    doUpload(){
+
+    },
 
     submitUpload() {
       console.log('正在上传'+this.fileName)
@@ -97,16 +104,31 @@ export default {
       }
 
       let fileFormData = new FormData();
+
       fileFormData.append('uploadFile', this.files);//uploadFile是键，files是值，就是要传的文件，test.zip是要传的文件名
+
       // fileFormData.append('uploadFile', this.files, this.fileName,);//filename是键，file是值，就是要传的文件，test.zip是要传的文件名
-      let requestConfig = {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        },
-      }
+      // let requestConfig = {
+      //   headers: {
+      //     'Content-Type': 'multipart/form-data'
+      //   },
+      // }
+      let modelNO='';
+      if(this.modelName==='选项1')modelNO='1';
+      else modelNO='2';
+      fileFormData.append('model',modelNO)
+
       const _this=this
       console.log("正在axios")
-      axios.post('http://localhost:9090/prediction/systemPrediction', fileFormData).then((res) => {
+      axios.post('http://localhost:9090/prediction/systemPrediction', fileFormData )
+      // axios({
+      //   method:'post',
+      //   url:'http://localhost:9090/prediction/systemPrediction',
+      //
+      //   params:{fileFormData}
+      //
+      // })
+          .then((res) => {
         // console.log(res)
         if (res.data) {
           console.log(res.data);
