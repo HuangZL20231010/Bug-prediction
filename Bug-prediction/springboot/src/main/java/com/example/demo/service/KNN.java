@@ -9,8 +9,6 @@ public interface KNN {
     double precise(); //
     int knn(ArrayList<Double> newdata, int k);
     void init(String file); //默认构造，k=5，weight =
-    void init(String file,int ku,double weightu);
-    ArrayList<Integer> predictFile(String file);
     ArrayList<ArrayList<Double>> dataProcess(ArrayList<ArrayList<Double>> data);
     // 传入用户上传的csv文件的绝对路径，返回训练后的二维数组
     public ArrayList<ArrayList<Double>> systemPrediction(String filePath);

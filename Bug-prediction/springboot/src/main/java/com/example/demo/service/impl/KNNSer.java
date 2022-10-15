@@ -28,20 +28,19 @@ public class KNNSer implements KNN {
     };
     @Override
     public void init(String file){
-        ArrayList<ArrayList<Double>> data = FileProcessImpl.read_csv(file,true);
+        data_train = new ArrayList<>();
+        data_train = FileProcessImpl.read_csv(file,true);
         int clean = 0;
         int buggy = 0;
-        length = data.get(0).size();
+        length = data_train.get(0).size();
         data_test = new ArrayList<>();
-        data_train = new ArrayList<>();
         dataset = new ArrayList<>();
-        for(int i=0;i<data.size();i++){
-            if(i%5==0) data_test.add(data.get(i));
-            if(i%5!=0) data_train.add(data.get(i));
-            if(data.get(i).get(length-1)==1.0) buggy++;
-            if(data.get(i).get(length-1)==0.0) clean++;
+        for(int i=0;i<data_train.size();i++){
+//            if(i%5==0) data_test.add(data.get(i));
+//            if(i%5!=0) data_train.add(data.get(i));
+            if(data_train.get(i).get(length-1)==1.0) buggy++;
+            if(data_train.get(i).get(length-1)==0.0) clean++;
         }
-        data_test = dataProcess(data_test);
         data_train = dataProcess(data_train);
         System.out.println("数据归一化成功");
         k=45;
@@ -50,42 +49,14 @@ public class KNNSer implements KNN {
         System.out.println("weight:"+weight);
         length = data_train.get(0).size();
         size = data_train.size();
-        System.out.println("初始化已完成 训练集："+size+"*"+length+"  测试集："+data_test.size()+"*"+length);
+        System.out.println("初始化已完成 训练集："+size+"*"+length);
         System.out.println("KNN初始化完成");
     }
 
-    @Override
-    public void init(String file, int ku, double weightu) {
-        ArrayList<ArrayList<Double>> data = FileProcessImpl.read_csv(file,true);
-        data_test = new ArrayList<>();
-        data_train = new ArrayList<>();
-        dataset = new ArrayList<>();
-        for(int i=0;i<data.size();i++){
-            if(i%5==0) data_test.add(data.get(i));
-            if(i%5!=0) data_train.add(data.get(i));
-        }
-        k=ku;
-        weight = weightu;
-        length = data_train.get(0).size();
-        size = data_train.size();
-        System.out.println("初始化已完成 训练集："+size+"*"+length+"  测试集："+data_test.size()+"*"+length);
-        System.out.println("KNN初始化完成");
-    }
+
 
     @Override
-    public ArrayList<Integer> predictFile(String file) {
-        ArrayList<ArrayList<Double>> data = FileProcessImpl.read_csv(file,true);
-        if(data.get(0).size()!=length-1) return null; //用户输入的数据集和测试集除标签外的维度不匹配
-        ArrayList<Integer> result = new ArrayList<>();
-        for(int i=0;i<data.size();i++){
-            result.add(knn(data.get(i),k));
-        }
-
-        return result;
-    }
-
-    @Override
-    public ArrayList<ArrayList<Double>> dataProcess(ArrayList<ArrayList<Double>> data) {
+    public ArrayList<ArrayList<Double>> dataProcess(ArrayList<ArrayList<Double>> data) { // 归一化
         int len = data.get(0).size(); // 数据维度
         int size = data.size();       // 数据量
         ArrayList<Double> maxmin = new ArrayList<>();
@@ -121,15 +92,22 @@ public class KNNSer implements KNN {
     @Override
     public double calDistance(ArrayList<Double> data1, ArrayList<Double> data2) {
         double result = 0;
-        for (int i=0;i<data1.size()-1;i++){ // 除最后一列的标签外的权重
-            result+=Math.pow((data1.get(i) - data2.get(i)), 2);
+        if(data2.size() == data1.size()){
+            for (int i=0;i<data1.size()-1;i++){ // 测试
+                result+=Math.pow((data1.get(i) - data2.get(i)), 2);
+            }
+        }
+        else {
+            for (int i=0;i<data2.size() && i<data1.size();i++){ //
+                result+=Math.pow((data1.get(i) - data2.get(i)), 2);
+            }
         }
         return Math.sqrt(result);
     }
 
     @Override
-    public int knn(ArrayList<Double> newdata, int k) {
-        System.out.println("------------");
+    public int knn(ArrayList<Double> newdata, int k) { //newdata为带标签的测试集
+//        System.out.println("------------");
         if(k>=data_test.size()) return 0;
         double clean=0;
         double buggy=0;
@@ -145,12 +123,11 @@ public class KNNSer implements KNN {
 //            System.out.println("第"+i+"个dataset的种类:"+tem);
             if(tem==0.0) clean++;
             if(tem==1.0) {
-                System.out.println("第"+i+"个点"+"事buggy数据");
+//                System.out.println("第"+i+"个点"+"事buggy数据");
                 buggy+= weight;
             }
         }
 //        System.out.print("clean:"+clean+"   buggy:"+buggy);
-        System.out.println("------------");
         if(clean>buggy) return 1;
         else if(clean<buggy) return 0;
         return knn(newdata,k+1);
@@ -186,13 +163,18 @@ public class KNNSer implements KNN {
 
     // 传入用户上传的csv文件的绝对路径，返回训练后的二维数组
     public ArrayList<ArrayList<Double>> systemPrediction(String filePath) {
-        return null;
+        ArrayList<ArrayList<Double>> data = FileProcessImpl.read_csv(filePath,true);
+        if(data.get(0).size()!=length-1) return null; // 用户输入数据集维度不等于默认数据集的维度-1
+        ArrayList<ArrayList<Double>> result = new ArrayList<>();
+        for(int i=0;i<data.size();i++){
+            ArrayList<Double> tem = new ArrayList<>();
+            tem.add((double)knn(data.get(i),k));
+            result.add(tem);
+        }
+
+        return result;
     }
 
-    // 传入用户上传的csv文件的绝对路径，返回准确率(该项只用于用户自定义训练部分)
-    public Double systemPredictionAccuracy(String filePath) {
-        return null;
-    }
 
     public static void main(String[] args){
         KNNSer knnSer = new KNNSer();
