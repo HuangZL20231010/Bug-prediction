@@ -12,7 +12,10 @@ public interface UserService {
 
     int register(User user);
 
-    boolean login(String username, String password);
+    int register(String username, String password, String email);
+
+    // 返回登录的人的用户名
+    User login(String email, String password);
 
     ArrayList<User> getRankingList();
 }

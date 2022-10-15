@@ -36,10 +36,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean login(String username, String password) {
+    public int register(String username, String password, String email) {
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setEmail(email);
+
+        return register(user);
+    }
+
+    @Override
+    public User login(String email, String password) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("username", username).eq("password", password);
-        return userMapper.selectOne(queryWrapper) != null;
+        queryWrapper.eq("username", email).eq("password", password);
+
+        return userMapper.selectOne(queryWrapper);
     }
 
     @Override

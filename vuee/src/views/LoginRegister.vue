@@ -82,7 +82,7 @@
 					axios({
 						method:'get',
 						url: 'http://localhost:9090/email/login',
-            params: {username:self.form.useremail,password:self.form.userpwd },
+            params: {email:self.form.useremail,password:self.form.userpwd },
 
 						// data: {
 						// 	email: self.form.useremail,
@@ -91,22 +91,17 @@
 					})
 					.then( res => {
             console.log(res)
-						switch(res.data){
-							case 0: 
-								alert("登录成功！");
-                let username=res.data.username;
-                // self.$router.push({path:'/selfTrainView',query: {username:username}});
-                self.$router.push({path:'/selfTrainView'});
-                sessionStorage.setItem("username",username);
-
-								break;
-							case -1:
-								this.emailError = true;
-								break;
-							case 1:
-								this.passwordError = true;
-								break;
-						}
+            if(res.data!='Error'){
+              alert("登录成功！");
+              console.log(res);
+              let username=res.data;
+              // self.$router.push({path:'/selfTrainView',query: {username:username}});
+              self.$router.push({path:'/selfTrainView'});
+              sessionStorage.setItem("username",username);
+            }else{
+              this.emailError = true;
+              this.passwordError = true;
+            }
 					})
 					.catch( err => {
 						console.log(err);
@@ -121,19 +116,20 @@
 					axios({
 						method:'post',
 						url: 'http://localhost:9090/email/register',
-						data: {
+            params: {
 							username: self.form.username,
-							email: self.form.useremail,
-							password: self.form.userpwd
+              password: self.form.userpwd,
+							email: self.form.useremail
 						}
 					})
 					.then( res => {
+            console.log(res);
 						switch(res.data){
 							case 0:
 								alert("注册成功！");
 								this.login();
 								break;
-							case -1:
+							case 1:
 								this.existed = true;
 								break;
 						}

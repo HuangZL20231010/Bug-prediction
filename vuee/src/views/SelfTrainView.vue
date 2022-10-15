@@ -123,7 +123,6 @@ export default {
     // console.log(this.GLOBAL.token)
 
     console.log("username:"+sessionStorage.getItem('username'));
-    console.log(sessionStorage.getItem('222'));
   },
 
   methods:{
@@ -143,8 +142,8 @@ export default {
 
     beforeUpload_train(file){
       this.files = file;
-      const extension3 = file.name.split('.')[1] === 'csv'
-      if (!extension3) {
+      const extension = file.name.split('.')[1] === 'csv'
+      if (!extension) {
         this.$message.warning('上传模板只能是csv格式!')
         return
       }
@@ -156,39 +155,27 @@ export default {
 
     submitUpload() {
       console.log('正在上传'+this.fileName)
-      if(this.fileName === ""){
-        this.$message.warning('请选择要上传的文件！')
-        return false
-      }
+      // if(this.fileName === ""){
+      //   this.$message.warning('请选择要上传的文件！')
+      //   return false
+      // }
 
       let fileFormData = new FormData();
       fileFormData.append('uploadFile', this.files);//uploadFile是键，files是值，就是要传的文件，test.zip是要传的文件名
       // fileFormData.append('uploadFile', this.files, this.fileName,);//filename是键，file是值，就是要传的文件，test.zip是要传的文件名
-      let modelNO='';
-      if(this.modelName==='选项1')modelNO='1';
-      else modelNO='2';
-      fileFormData.append('model',modelNO);
       fileFormData.append('epochNum',this.epochNum);
       fileFormData.append('batchSize',this.batchSize);
       fileFormData.append('learningrate',this.alpha);
-      fileFormData.append('username',this.username);
 
       const _this=this
       console.log("正在axios")
       axios.post('http://localhost:9090/prediction/systemPrediction', fileFormData).then((res) => {
         // console.log(res)
         if (res.data) {
+          console.log("训练集上传成功！")
           console.log(res.data);
-          if(res.data!=0){
-            _this.filePath=res.data;
-            _this.isAlreadUpload=true;
-          }
+          //图表
 
-          this.$message({
-            message: '操作成功',
-            type: 'success',
-            duration: 1500,
-          })
         } else {
           console.log("fk")
           this.$message.error(res.data.msg)

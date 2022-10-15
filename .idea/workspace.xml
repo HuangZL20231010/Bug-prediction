@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/14 23:16 wj 后端大更新" />
+    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/15 16:36 wj">
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +60,7 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.DemoApplicationTests.contextLoads">
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
     <configuration name="DemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -117,6 +121,8 @@
       <workItem from="1665191886924" duration="2640000" />
       <workItem from="1665278341260" duration="7348000" />
       <workItem from="1665748945646" duration="11627000" />
+      <workItem from="1665812732243" duration="2421000" />
+      <workItem from="1665822611657" duration="694000" />
     </task>
     <task id="LOCAL-00001" summary="2022/9/30 22:44">
       <created>1664549054890</created>
@@ -160,7 +166,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665760592514</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2022/10/15 13:46 wj">
+      <created>1665812819905</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665812819905</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2022/10/15 16:36 wj">
+      <created>1665822980370</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665822980370</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +204,9 @@
     <MESSAGE value="2022/10/7 14:53 wj 系统预测后端部分更新" />
     <MESSAGE value="2022/10/9 9:57 wj 系统预测后端文件传输接口" />
     <MESSAGE value="2022/10/14 23:16 wj 后端大更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/10/14 23:16 wj 后端大更新" />
+    <MESSAGE value="2022/10/15 13:46 wj" />
+    <MESSAGE value="2022/10/15 16:36 wj" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/10/15 16:36 wj" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -26,7 +26,7 @@
               </el-dropdown-menu>
             </template>
           </el-dropdown>
-          <span style="font-size: 16px">霖</span>
+          <span style="font-size: 16px">{{username}}</span>
         </div>
       </el-menu>
 
@@ -161,7 +161,7 @@
     name: "index",
     data(){
       return{
-
+        username:sessionStorage.getItem('username')
       }
     },
     methods:{
