@@ -12,6 +12,8 @@ public interface UserService {
 
     int register(User user);
 
+    int register(String username, String password, String email);
+
     boolean login(String username, String password);
 
     ArrayList<User> getRankingList();
