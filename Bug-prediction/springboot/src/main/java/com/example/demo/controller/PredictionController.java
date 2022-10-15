@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.common.Result;
 import com.example.demo.service.UserTrainInfoService;
 import com.example.demo.utils.Global;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,10 +10,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import wniemiec.util.data.Pair;
+
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Objects;
 
 @Controller
@@ -22,38 +26,52 @@ public class PredictionController {
     @Autowired
     private UserTrainInfoService userTrainInfoService;
 
-    @RequestMapping(value = "/userDefinedPredictionLogistic", method = RequestMethod.POST)
-    @ResponseBody
-    public String userDefinedPrediction(@RequestParam("uploadFile")MultipartFile uploadFile,
-                                        @RequestParam("model")String model,
-                                        @RequestParam("epochNum")Integer epochNum,
-                                        @RequestParam("batchSize")Integer batchSize,
-                                        @RequestParam("learningrate")Double learningrate,
+    @RequestMapping(value = "/userDefinedPrediction2")
+    public Double userDefinedPrediction(@RequestParam("uploadFile")MultipartFile uploadFile,
                                         @RequestParam("username")String username) {
-        String result;
-
-        /* 如果文件为空,返回对应的错误信息 */
-        if (null == uploadFile) {
-            result = "Didn't get file!";
-            return result;
-        }
-
-        /* 如果文件不是csv格式,返回对应的错误信息 */
+        // 得到文件的名字
         String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename()).toLowerCase();
-        if (!fileName.endsWith(".csv")) {
-            result = "The file format is incorrect. Upload the CSV file!";
-            return result;
-        }
-
-        /* 将该csv文件存储到本地 */
-        if (!userTrainInfoService.storeFile(uploadFile)) {
-            result = "Failed to save the file locally!";
-            return result;
-        }
-
+        // 将该csv文件存储到本地
+        userTrainInfoService.storeFile(uploadFile);
         /* 处理该csv文件,得到训练后的csv文件路径 */
         String sourceFilePath = Global.resourcesPath + "uploadFiles/" + fileName;
-        return userTrainInfoService.userDefinedPredictionLogistic(sourceFilePath, fileName, epochNum, batchSize, learningrate, username);
+        return userTrainInfoService.userDefinedEvaluationLogistic(Global.resourcesPath + "uploadFiles/" + fileName, fileName, username);
+    }
+
+    @RequestMapping(value = "/userDefinedPrediction", method = RequestMethod.POST)
+    @ResponseBody
+    public Pair<ArrayList<ArrayList<Double>>, Double> userDefinedPrediction(
+            @RequestParam("uploadFile")MultipartFile uploadFile,
+            @RequestParam("epochNum")Integer epochNum,
+            @RequestParam("batchSize")Integer batchSize,
+            @RequestParam("learningrate")Double learningrate) {
+
+        String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename()).toLowerCase();
+
+//        /* 如果文件为空,返回对应的错误信息 */
+//        if (null == uploadFile) {
+//            result.setMsg("Didn't get file!");
+//            return result;
+//        }
+//
+//        /* 如果文件不是csv格式,返回对应的错误信息 */
+//        if (!fileName.endsWith(".csv")) {
+//            result.setMsg("The file format is incorrect. Upload the CSV file!");
+//            return result;
+//        }
+//
+//        /* 将该csv文件存储到本地 */
+//        if (!userTrainInfoService.storeFile(uploadFile)) {
+//            result.setMsg("Failed to save the file locally!");
+//            return result;
+//        }
+
+
+        // 将该csv文件存储到本地
+        userTrainInfoService.storeFile(uploadFile);
+        /* 处理该csv文件,得到训练后的csv文件路径 */
+        String sourceFilePath = Global.resourcesPath + "uploadFiles/" + fileName;
+        return userTrainInfoService.userDefinedTrainLogistic(sourceFilePath, epochNum, batchSize, learningrate);
     }
 
     /* 系统预测,接收前端传来的csv文件,返回训练文件 */

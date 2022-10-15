@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/15 16:36 wj">
+    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/15 16:41 wj">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_wniemiec_util_data_pair_1_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/pojo/table/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/pojo/table/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +129,8 @@
       <workItem from="1665278341260" duration="7348000" />
       <workItem from="1665748945646" duration="11627000" />
       <workItem from="1665812732243" duration="2421000" />
-      <workItem from="1665822611657" duration="694000" />
+      <workItem from="1665822611657" duration="1316000" />
+      <workItem from="1665831860070" duration="3244000" />
     </task>
     <task id="LOCAL-00001" summary="2022/9/30 22:44">
       <created>1664549054890</created>
@@ -180,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665822980370</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2022/10/15 16:41 wj">
+      <created>1665823316015</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665823316015</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +221,8 @@
     <MESSAGE value="2022/10/14 23:16 wj 后端大更新" />
     <MESSAGE value="2022/10/15 13:46 wj" />
     <MESSAGE value="2022/10/15 16:36 wj" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/10/15 16:36 wj" />
+    <MESSAGE value="2022/10/15 16:41 wj" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/10/15 16:41 wj" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

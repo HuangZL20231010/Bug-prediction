@@ -15,10 +15,12 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import wniemiec.util.data.Pair;
 
 @Service
 public class UserTrainInfoServiceImpl implements UserTrainInfoService {
 
+    private LogisticRegressionImpl user_logisticRegression;
     @Autowired
     private KNN knn;
 
@@ -109,14 +111,22 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
     }
 
     @Override
-    public String userDefinedPredictionLogistic(String filePath, String fileName, Integer epochNum, Integer batchSize,
-                                                Double learningrate, String userName) {
+    public Pair<ArrayList<ArrayList<Double>>, Double> userDefinedTrainLogistic(String filePath, Integer epochNum, Integer batchSize,
+                                                                               Double learningrate){
         //根据用户上传的训练集训练出一个模型
         ArrayList<ArrayList<Double>> user_origin_data= FileProcessImpl.read_csv("user's file",true);
         ArrayList<ArrayList<Double>> user_all_features= MatrixOperation.converse(MatrixOperation.iloc(user_origin_data,0,0,user_origin_data.size()-1,user_origin_data.get(0).size()-2), false);
         ArrayList<ArrayList<Double>> user_all_labels=MatrixOperation.iloc(user_origin_data,0,user_origin_data.get(0).size()-1,user_origin_data.size()-1,user_origin_data.get(0).size()-1);
-        LogisticRegressionImpl user_logisticRegression=new LogisticRegressionImpl(false,user_all_features.get(0).size());
+        user_logisticRegression=new LogisticRegressionImpl(false,user_all_features.get(0).size());
         user_logisticRegression.train(user_all_features,user_all_labels,epochNum,batchSize,learningrate);
+        Pair<ArrayList<ArrayList<Double>>, Double> result = new Pair<>(user_logisticRegression.weights,user_logisticRegression.getBias());
+
+
+        return result;
+    }
+
+    @Override
+    public Double userDefinedEvaluationLogistic(String filePath, String fileName, String userName) {
 
         //系统用来评估此模型的EvaluateData.csv数据集，
         //下面两行为系统读取EvaluateData.csv的真实标签
@@ -124,7 +134,7 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
         ArrayList<ArrayList<Double>> evaluate_label=MatrixOperation.iloc(evaluate_data,0,evaluate_data.get(0).size()-1,evaluate_data.size()-1,evaluate_data.get(0).size()-1);
 
         //用户需下载没有标签的EvaluateData_nolabel.csv并数据处理返给系统，系统将用自己之前训练的模型预测结果，并将其与真实标签evaluate_label做比较
-        ArrayList<ArrayList<Double>> user_predict_data=FileProcessImpl.read_csv("user's predict file which need to be predict and evaluate",true);
+        ArrayList<ArrayList<Double>> user_predict_data=FileProcessImpl.read_csv(filePath,true);
         ArrayList<ArrayList<Double>> user_predict_features=MatrixOperation.converse(MatrixOperation.iloc(user_predict_data,0,0,user_predict_data.size()-1,user_predict_data.get(0).size()-1),false);
         ArrayList<ArrayList<Double>> user_predict_result=user_logisticRegression.forward(user_predict_features);
         Double acc = user_logisticRegression.evaluate(user_predict_result,evaluate_label);
@@ -138,7 +148,6 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
         if (acc > user.getMaxaccuracy()) {
             // 如果本次训练超过了以往训练效果,则更新对应字段
             user.setMaxaccuracy(acc);
-            user.setMaxaccuracymodel("1");
         }
 
         userMapper.update(user, queryWrapper);
@@ -146,12 +155,7 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
         // 保存训练文件
         String destinationPath = Global.resourcesPath + "predictionFiles/UserDefinedLogistic_" + fileName;
 
-        return writeTwoArrayFile(destinationPath, user_predict_result);
-    }
-
-    @Override
-    public String userDefinedPredictionKNN(String filePath, String fileName, String username) {
-        return "1";
+        return acc;
     }
 
 }
