@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.pojo.table.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ public class UserController {
     private UserService userService;
 
 
-    @RequestMapping("/register")
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
     @ResponseBody
     public int register(@RequestParam("username")String username,
                         @RequestParam("password")String password,
@@ -26,9 +27,11 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     @ResponseBody
-    public int login(@RequestParam("username") String username, @RequestParam("password") String password) {
-        if (userService.login(username, password))
-            return 0;
-        return 1;
+    public String login(@RequestParam("email") String email, @RequestParam("password") String password) {
+        User user = userService.login(email, password);
+        if (user == null)
+            return "Error";
+
+        return user.getUsername();
     }
 }

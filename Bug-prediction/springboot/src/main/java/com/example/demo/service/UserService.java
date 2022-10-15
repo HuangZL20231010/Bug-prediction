@@ -14,7 +14,8 @@ public interface UserService {
 
     int register(String username, String password, String email);
 
-    boolean login(String username, String password);
+    // 返回登录的人的用户名
+    User login(String email, String password);
 
     ArrayList<User> getRankingList();
 }
