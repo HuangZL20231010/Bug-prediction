@@ -160,4 +160,8 @@ public class LogisticRegressionImpl {
         }
         return result;
     }
+
+    public Double getBias() {
+        return bias;
+    }
 }

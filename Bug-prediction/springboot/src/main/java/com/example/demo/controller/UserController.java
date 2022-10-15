@@ -32,6 +32,7 @@ public class UserController {
         if (user == null)
             return "Error";
 
+
         return user.getUsername();
     }
 }

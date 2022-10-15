@@ -18,8 +18,6 @@ public class User {
 
     Double maxaccuracy;
 
-    String maxaccuracymodel;
-
     public String getPassword() {
         return password;
     }
@@ -56,15 +54,8 @@ public class User {
         return maxaccuracy;
     }
 
-    public String getMaxaccuracymodel() {
-        return maxaccuracymodel;
-    }
-
     public void setMaxaccuracy(Double maxaccuracy) {
         this.maxaccuracy = maxaccuracy;
     }
 
-    public void setMaxaccuracymodel(String maxaccuracymodel) {
-        this.maxaccuracymodel = maxaccuracymodel;
-    }
 }
