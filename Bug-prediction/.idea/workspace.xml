@@ -5,24 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cc6300c-778b-473b-9dc0-1d9046792106" name="Default Changelist" comment="TKOTKCh something fix on UserTrainInfoServiceImpl 2022/10/9">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/predictionFiles/SystemLogistic_jdt.csv" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/predictionFiles/SystemLogistic_jdt.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/uploadFiles/JDT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/uploadFiles/JDT.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/KNN.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/KNN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/static/uploadFiles/JDT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/static/uploadFiles/JDT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuee/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuee/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuee/src/views/LoginRegister.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/LoginRegister.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuee/src/views/ModelTrainView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/ModelTrainView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuee/src/views/RankingView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/RankingView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vuee/src/views/SelfTrainView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/SelfTrainView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -341,7 +341,7 @@
       <workItem from="1665410051129" duration="1877000" />
       <workItem from="1665579192843" duration="3645000" />
       <workItem from="1665827230360" duration="6152000" />
-      <workItem from="1665888877593" duration="1493000" />
+      <workItem from="1665888877593" duration="4135000" />
     </task>
     <task id="LOCAL-00001" summary="TKOTKCh MOv2.0 FPv1.0 LRv1.0">
       <created>1664548787571</created>
@@ -421,23 +421,14 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java</url>
-          <line>30</line>
-          <properties class="com.example.demo.controller.PredictionController" method="userDefinedPrediction">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java</url>
-          <line>138</line>
+          <line>157</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java</url>
-          <line>116</line>
+          <line>135</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>

@@ -1,6 +1,8 @@
 <template>
   <div style="background-color: #f2f3f5;height: 380vh">
     <div class="father">
+
+      <!--训练集上传-->
       <div class="upLoadArea" v-if="!isAlreadUpload">
         <div class="modelChoose" v-if="!isAlreadUpload" >
           <div id="select">
@@ -30,14 +32,6 @@
             </el-form-item>
           </div>
 
-<!--          <div id="KCaoCan">-->
-<!--            <el-form-item label="K 值">-->
-<!--              <el-input-number v-model="KValue" :max="100" :min="0" :disabled="!chooseK"/>-->
-<!--            </el-form-item>-->
-<!--            <el-form-item label="权重">-->
-<!--              <el-input-number v-model="wise"  :precision="3" :step="0.1" :max="10" :min="0" :disabled="!chooseK"/>-->
-<!--            </el-form-item>-->
-<!--          </div>-->
 
 <!--          <div style="margin-top: 10px">超参选择表单  </div>-->
         </div>
@@ -59,7 +53,9 @@
         <div slot="tip" class="tip">只能上传csv文件</div>
       </div>
 
-      <div class="dowloadArea" v-if="!isAlreadDowload">
+
+      <!--测试集下载和上传-->
+      <div class="dowloadArea" >
         <div class="buttondiv">
           <el-button type="primary"
                      style="height: 200px;width: 200px;border-radius: 50%;margin-right: 2vw"
@@ -98,6 +94,11 @@
         </div>
       </div>
 
+
+      <!--图标展示区-->
+      <div class="chartShow" v-if="isAlreadUpload">
+        <div id="barChart" style="height: 90vh"></div>
+      </div>
     </div>
   </div>
 
@@ -105,6 +106,7 @@
 
 <script>
 import axios from "axios";
+import * as echarts from 'echarts';
 
 export default {
   name: "selfTrainView",
@@ -120,7 +122,6 @@ export default {
       files:'',
       fileName:'',
       filePath:'',
-      isAlreadUpload:false,
       epochNum:'5',
       batchSize:'1',
       alpha:'',
@@ -129,6 +130,22 @@ export default {
 
       chooseLogical:false,
       chooseK:false,
+
+      data_attr:[],//特征名
+      data_num:[],//特征参数值
+      attr_num:0,//特征数
+      father_height:'300vh',
+
+      isAlreadUpload:false,
+
+    }
+  },
+
+  computed: {
+    styleVar() {
+      return {
+        "--father_height": this.father_height
+      };
     }
   },
 
@@ -137,6 +154,14 @@ export default {
 
     console.log("username:"+sessionStorage.getItem('username'));
     this.username=sessionStorage.getItem('username');
+
+    console.log('原参数名：')
+    console.log(this.data_attr)
+    console.log('原参数值：')
+    console.log(this.data_num)
+
+    // console.log(this.data_num[0].label)
+
   },
 
   methods:{
@@ -162,13 +187,11 @@ export default {
         return
       }
       this.fileName = file.name;
-      console.log(this.fileName)
       this.submitUpload_train();
     },
 
 
     submitUpload_train() {
-      console.log('正在上传'+this.fileName)
       // if(this.fileName === ""){
       //   this.$message.warning('请选择要上传的文件！')
       //   return false
@@ -182,19 +205,45 @@ export default {
       fileFormData.append('learningrate',this.alpha);
 
       const _this=this
-      console.log("正在axios")
       axios.post('http://localhost:9090/prediction/userDefinedPrediction', fileFormData).then((res) => {
         // console.log(res)
-        if (res.data) {
-          console.log("训练集上传成功！")
-          console.log(res.data);
-          alert('模型已训练完成，快去上传测试集测试一下吧~');
-          //图表
+        console.log("训练集上传成功！")
+        // console.log(res.data.second.first);
 
-        } else {
-          console.log("fk")
-          this.$message.error(res.data.msg)
+        //参数值获取
+        _this.data_num1=res.data.second.first;
+
+
+        //特征名称获取
+        _this.data_attr=res.data.first;
+        _this.data_attr.pop();
+
+
+        console.log('现参数名：')
+        console.log(_this.data_attr);
+        console.log('现参数值：')
+        console.log(_this.data_num1);
+
+        _this.data_num=_this.data_num1;
+        for(let i=0;i<_this.data_num.length;i++){
+          _this.data_num[i]=Math.round(_this.data_num[i] * 100 ) / 100;
         }
+
+        console.log(_this.data_num);
+        //特征数获取
+        _this.attr_num=_this.data_attr.length;
+
+
+
+
+
+
+
+
+        alert('模型已训练完成，快去上传测试集测试一下吧~');
+        _this.isAlreadUpload=true;
+        //图表
+        this.initEcharts();
       })
     },
 
@@ -251,14 +300,66 @@ export default {
       })
     },
 
+    //初始化图标
+    initEcharts(){
+      var myChart = echarts.init(document.getElementById('barChart'));
+// 绘制图表
+      let option;
+      option={
+        title: {
+          text: '训练特征值参数表'
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+        grid: {
+          top: 80,
+          bottom: 30
+        },
+        xAxis: {
+          type: 'value',
+          position: 'top',
+          splitLine: {
+            lineStyle: {
+              type: 'dashed'
+            }
+          }
+        },
+        yAxis: {
+          type: 'category',
+          axisLine: { show: false },
+          axisLabel: { show: false },
+          axisTick: { show: false },
+          splitLine: { show: false },
+          data: this.data_attr
+        },
+        series: [
+          {
+            name: 'Cost',
+            type: 'bar',
+            stack: 'Total',
+            label: {
+              show: true,
+              formatter: '{b}'
+            },
+            data: this.data_num1
+          }
+        ]
+      };
+      myChart.setOption(option);
+
+    }
   }
 }
 </script>
 
-<style scoped>
+<style  scoped  >
 .father{
   width: 80%;
-  height: 250vh;
+  height: var(--father_height);
   margin-left: 10%;
   margin-top: 15px;
   background-color: #ddf6fa;
@@ -344,13 +445,18 @@ export default {
   margin-right: 2vw;
 }
 
-.file-name{
-  /*font-size: 15px;*/
-  position: absolute;
-  width: 100%;
-  top:80%;
+.chartShow{
+  /*background-color: #cb7878;*/
+  position: relative;
+  width: 80%;
+  height: 90vh;
+  margin-left: 10%;
+  top: 30vh;
 
+  border-radius: 30px;
+  border:2px dashed darkgray;
 }
+
 .successArea{
   /*background-color: red;*/
   position: absolute;
