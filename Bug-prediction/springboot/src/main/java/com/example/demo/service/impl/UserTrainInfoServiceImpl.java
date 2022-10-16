@@ -105,12 +105,11 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
     public String systemPredictionLogistic(String filePath, String fileName) {
 
         /* 使用系统逻辑回归模型预测数据 */
-        LogisticRegressionImpl logisticRegression=new LogisticRegressionImpl(false,61);
-        ArrayList<ArrayList<Double>> origin_data= FileProcessImpl.read_csv(filePath,true);
-        ArrayList<ArrayList<Double>> all_features= MatrixOperation.converse(
-                MatrixOperation.iloc(origin_data,0,0,origin_data.size()-1,origin_data.get(0).size()-2),
-                true);
-        ArrayList<ArrayList<Double>> result=logisticRegression.predict(all_features);
+        //系统预测,用户需上传有61位特征（即全部特征）且不带标签的数据集，使用系统提供的模型进行预测
+        LogisticRegressionImpl logisticRegression=new LogisticRegressionImpl(true,61);
+        ArrayList<ArrayList<Double>> origin_data=FileProcessImpl.read_csv(filePath,true);
+        ArrayList<ArrayList<Double>> all_features=MatrixOperation.converse(MatrixOperation.iloc(origin_data,0,0,origin_data.size()-1,origin_data.get(0).size()-1),true);
+        ArrayList<ArrayList<Double>>result=logisticRegression.predict(all_features);
 
         /* 将训练结果存到本地 */
         String destinationPath = Global.resourcesPath + "predictionFiles/SystemLogistic_" + fileName;
