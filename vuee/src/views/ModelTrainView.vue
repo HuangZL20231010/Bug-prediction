@@ -179,7 +179,7 @@ export default {
   height: 650px;
   margin-left: 10%;
   margin-top: 15px;
-  background-color: #c9ebf6;
+  background-color: #ddf6fa;
   position: absolute;
 
   border-radius: 30px;

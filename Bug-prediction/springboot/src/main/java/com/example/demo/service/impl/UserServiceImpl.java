@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User login(String email, String password) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("username", email).eq("password", password);
+        queryWrapper.eq("email", email).eq("password", password);
 
         return userMapper.selectOne(queryWrapper);
     }

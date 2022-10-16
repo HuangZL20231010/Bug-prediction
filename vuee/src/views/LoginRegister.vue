@@ -92,11 +92,11 @@
 					.then( res => {
             console.log(res)
             if(res.data!='Error'){
-              alert("登录成功！");
-              console.log(res);
+              // alert("登录成功！");
+              // console.log(res);
               let username=res.data;
               // self.$router.push({path:'/selfTrainView',query: {username:username}});
-              self.$router.push({path:'/selfTrainView'});
+              self.$router.push({path:'/modelTrainView'});
               sessionStorage.setItem("username",username);
             }else{
               this.emailError = true;

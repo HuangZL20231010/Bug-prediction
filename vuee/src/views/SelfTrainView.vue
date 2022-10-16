@@ -30,14 +30,14 @@
             </el-form-item>
           </div>
 
-          <div id="KCaoCan">
-            <el-form-item label="K 值">
-              <el-input-number v-model="KValue" :max="100" :min="0" :disabled="!chooseK"/>
-            </el-form-item>
-            <el-form-item label="权重">
-              <el-input-number v-model="wise"  :precision="3" :step="0.1" :max="10" :min="0" :disabled="!chooseK"/>
-            </el-form-item>
-          </div>
+<!--          <div id="KCaoCan">-->
+<!--            <el-form-item label="K 值">-->
+<!--              <el-input-number v-model="KValue" :max="100" :min="0" :disabled="!chooseK"/>-->
+<!--            </el-form-item>-->
+<!--            <el-form-item label="权重">-->
+<!--              <el-input-number v-model="wise"  :precision="3" :step="0.1" :max="10" :min="0" :disabled="!chooseK"/>-->
+<!--            </el-form-item>-->
+<!--          </div>-->
 
 <!--          <div style="margin-top: 10px">超参选择表单  </div>-->
         </div>
@@ -62,23 +62,39 @@
       <div class="dowloadArea" v-if="!isAlreadDowload">
         <div class="buttondiv">
           <el-button type="primary"
-                     style="height: 200px;width: 200px;border-radius: 50%;margin-right: 5vw"
+                     style="height: 200px;width: 200px;border-radius: 50%;margin-right: 2vw"
                      @click="downLoadTestSet" >
             <el-icon style="vertical-align: middle"><Search /></el-icon>
             <span style="vertical-align: middle;font-size: 20px"> 下载测试集 </span>
           </el-button>
 
+          <el-upload
+              class="upload-demo"
+              ref="upload"
+              action="doUpload"
+              :limit="1"
+              :before-upload="beforeUpload_test"
 
+          >
 
-          <el-button type="primary"
-                     style="height: 200px;width: 200px;border-radius: 50%;margin-left: 5vw"
-                     @click="upLoadTestSet" >
-            <el-icon style="vertical-align: middle"><Search /></el-icon>
-            <span style="vertical-align: middle;font-size: 20px"> 上传测试集 </span>
-          </el-button>
+              <el-button type="primary"
+                         style="height: 200px;width: 200px;border-radius: 50%;margin-left: 2vw"
+                         slot="trigger">
+                <el-icon style="vertical-align: middle"><Search /></el-icon>
+                <span style="vertical-align: middle;font-size: 20px"> 上传测试集 </span>
+              </el-button>
+
+          </el-upload>
+
+<!--          <el-button type="primary"-->
+<!--                     style="height: 200px;width: 200px;border-radius: 50%;margin-left: 5vw"-->
+<!--                     @click="upLoadTestSet" >-->
+<!--            <el-icon style="vertical-align: middle"><Search /></el-icon>-->
+<!--            <span style="vertical-align: middle;font-size: 20px"> 上传测试集 </span>-->
+<!--          </el-button>-->
         </div>
         <div>
-          <div slot="tip" class="tip" style="top: 80%">注释</div>
+          <div slot="tip" class="tip" style="top: 80%">请先下载测试集，再将处理好的测试集重新上传到本站</div>
         </div>
       </div>
 
@@ -98,9 +114,6 @@ export default {
       options: [{
         value: '逻辑回归',
         label: '逻辑回归'
-      }, {
-        value: 'K近邻',
-        label: 'K近邻'
       }],
 
       modelName:'',
@@ -111,8 +124,8 @@ export default {
       epochNum:'5',
       batchSize:'1',
       alpha:'',
-      KValue:'',
-      wise:'',
+      // KValue:'',
+      // wise:'',
 
       chooseLogical:false,
       chooseK:false,
@@ -123,6 +136,7 @@ export default {
     // console.log(this.GLOBAL.token)
 
     console.log("username:"+sessionStorage.getItem('username'));
+    this.username=sessionStorage.getItem('username');
   },
 
   methods:{
@@ -149,11 +163,11 @@ export default {
       }
       this.fileName = file.name;
       console.log(this.fileName)
-      this.submitUpload();
+      this.submitUpload_train();
     },
 
 
-    submitUpload() {
+    submitUpload_train() {
       console.log('正在上传'+this.fileName)
       // if(this.fileName === ""){
       //   this.$message.warning('请选择要上传的文件！')
@@ -169,11 +183,12 @@ export default {
 
       const _this=this
       console.log("正在axios")
-      axios.post('http://localhost:9090/prediction/systemPrediction', fileFormData).then((res) => {
+      axios.post('http://localhost:9090/prediction/userDefinedPrediction', fileFormData).then((res) => {
         // console.log(res)
         if (res.data) {
           console.log("训练集上传成功！")
           console.log(res.data);
+          alert('模型已训练完成，快去上传测试集测试一下吧~');
           //图表
 
         } else {
@@ -183,6 +198,7 @@ export default {
       })
     },
 
+    //下载测试集
     downLoadTestSet(){
       axios({
         url: 'http://localhost:9090/prediction/getEvaluateFile',
@@ -201,6 +217,39 @@ export default {
       })
     },
 
+    //上传测试集
+    beforeUpload_test(file){
+      this.files = file;
+      const extension = file.name.split('.')[1] === 'csv'
+      if (!extension) {
+        this.$message.warning('上传模板只能是csv格式!')
+        return
+      }
+      this.fileName = file.name;
+
+      console.log('正在上传'+this.fileName)
+      console.log('准备号了用户名'+this.username)
+      let fileFormData = new FormData();
+      fileFormData.append('uploadFile', this.files);//uploadFile是键，files是值，就是要传的文件，test.zip是要传的文件名
+      fileFormData.append('username',this.username);
+
+
+      const _this=this
+      console.log("正在axios")
+      axios.post('http://localhost:9090/prediction/userDefinedPrediction2', fileFormData).then((res) => {
+        // console.log(res)
+        if (res.data) {
+          console.log("测试集上传成功！")
+          console.log(res.data);
+          alert()
+          //图表
+
+        } else {
+          console.log("fk")
+          this.$message.error(res.data.msg)
+        }
+      })
+    },
 
   }
 }
@@ -212,7 +261,7 @@ export default {
   height: 250vh;
   margin-left: 10%;
   margin-top: 15px;
-  background-color: #c9ebf6;
+  background-color: #ddf6fa;
   position: absolute;
 
   border-radius: 30px;
@@ -230,6 +279,9 @@ export default {
 
   border-radius: 30px;
   border:2px dashed darkgray;
+
+  /*display: flex;*/
+  /*justify-content: center;*/
 }
 
 
@@ -240,6 +292,9 @@ export default {
 
   position: absolute;
   top: 15%;
+
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -287,14 +342,6 @@ export default {
 #LogicalCaoCan{
   /*background: #861bbe;*/
   margin-right: 2vw;
-}
-
-#KCaoCan{
-  /*background-color: #861bbe;*/
-  margin-top: 3vh;
-  /*display: flex; !**!*/
-  /*justify-content: center; !*水平居中*!*/
-  align-items: Center; /*垂直居中*/
 }
 
 .file-name{

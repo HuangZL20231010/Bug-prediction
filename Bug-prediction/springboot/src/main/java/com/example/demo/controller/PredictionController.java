@@ -26,16 +26,17 @@ public class PredictionController {
     @Autowired
     private UserTrainInfoService userTrainInfoService;
 
-    @RequestMapping(value = "/userDefinedPrediction2")
+    @RequestMapping(value = "/userDefinedPrediction2",method = RequestMethod.POST)
+    @ResponseBody
     public Double userDefinedPrediction(@RequestParam("uploadFile")MultipartFile uploadFile,
                                         @RequestParam("username")String username) {
         // 得到文件的名字
-        String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename()).toLowerCase();
+        String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename());
         // 将该csv文件存储到本地
         userTrainInfoService.storeFile(uploadFile);
         /* 处理该csv文件,得到训练后的csv文件路径 */
         String sourceFilePath = Global.resourcesPath + "uploadFiles/" + fileName;
-        return userTrainInfoService.userDefinedEvaluationLogistic(Global.resourcesPath + "uploadFiles/" + fileName, fileName, username);
+        return userTrainInfoService.userDefinedEvaluationLogistic(sourceFilePath, fileName, username);
     }
 
     @RequestMapping(value = "/userDefinedPrediction", method = RequestMethod.POST)
@@ -46,7 +47,7 @@ public class PredictionController {
             @RequestParam("batchSize")Integer batchSize,
             @RequestParam("learningrate")Double learningrate) {
 
-        String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename()).toLowerCase();
+        String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename());
 
 //        /* 如果文件为空,返回对应的错误信息 */
 //        if (null == uploadFile) {
@@ -88,7 +89,7 @@ public class PredictionController {
         }
 
         /* 如果文件不是csv格式,返回对应的错误信息 */
-        String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename()).toLowerCase();
+        String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename());
         if (!fileName.endsWith(".csv")) {
             result = "The file format is incorrect. Upload the CSV file!";
             return result;
@@ -155,7 +156,7 @@ public class PredictionController {
     @RequestMapping(value = "/getEvaluateFile", method = RequestMethod.GET)
     @ResponseBody
     public void getEvaluateFile(HttpServletResponse response) {
-        String filePath = Global.resourcesPath + "EvaluateData.csv";
+        String filePath = Global.resourcesPath + "EvaluateData_nolabel.csv";
         ServletOutputStream out = null;
         FileInputStream ips = null;
 

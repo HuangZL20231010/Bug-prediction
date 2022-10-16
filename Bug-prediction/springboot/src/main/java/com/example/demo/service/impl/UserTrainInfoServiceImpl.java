@@ -114,7 +114,7 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
     public Pair<ArrayList<ArrayList<Double>>, Double> userDefinedTrainLogistic(String filePath, Integer epochNum, Integer batchSize,
                                                                                Double learningrate){
         //根据用户上传的训练集训练出一个模型
-        ArrayList<ArrayList<Double>> user_origin_data= FileProcessImpl.read_csv("user's file",true);
+        ArrayList<ArrayList<Double>> user_origin_data= FileProcessImpl.read_csv(filePath,true);
         ArrayList<ArrayList<Double>> user_all_features= MatrixOperation.converse(MatrixOperation.iloc(user_origin_data,0,0,user_origin_data.size()-1,user_origin_data.get(0).size()-2), false);
         ArrayList<ArrayList<Double>> user_all_labels=MatrixOperation.iloc(user_origin_data,0,user_origin_data.get(0).size()-1,user_origin_data.size()-1,user_origin_data.get(0).size()-1);
         user_logisticRegression=new LogisticRegressionImpl(false,user_all_features.get(0).size());
@@ -130,7 +130,7 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
 
         //系统用来评估此模型的EvaluateData.csv数据集，
         //下面两行为系统读取EvaluateData.csv的真实标签
-        ArrayList<ArrayList<Double>> evaluate_data=FileProcessImpl.read_csv("./PDENEW.csv",true);
+        ArrayList<ArrayList<Double>> evaluate_data=FileProcessImpl.read_csv(filePath,true);
         ArrayList<ArrayList<Double>> evaluate_label=MatrixOperation.iloc(evaluate_data,0,evaluate_data.get(0).size()-1,evaluate_data.size()-1,evaluate_data.get(0).size()-1);
 
         //用户需下载没有标签的EvaluateData_nolabel.csv并数据处理返给系统，系统将用自己之前训练的模型预测结果，并将其与真实标签evaluate_label做比较

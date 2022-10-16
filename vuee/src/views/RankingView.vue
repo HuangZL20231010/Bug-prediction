@@ -14,7 +14,7 @@
             用户名
           </div>
           <div class="modelChosen">
-            选择的模型
+            训练次数
           </div>
           <div class="accuracy">
             准确率
@@ -28,7 +28,7 @@
             {{item.username}}
           </div>
           <div class="modelChosen">
-            {{item.maxaccuracymodel}}
+            {{item.trainnums}}
           </div>
           <div class="accuracy">
             {{item.maxaccuracy}}
@@ -75,7 +75,7 @@ export default {
   height: 80vh;
   margin-left: 10%;
   margin-top: 15px;
-  background-color: #c9ebf6;
+  background-color: #ddf6fa;
   position: absolute;
 
   border-radius: 30px;
