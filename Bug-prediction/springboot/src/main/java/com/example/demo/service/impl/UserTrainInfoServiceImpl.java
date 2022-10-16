@@ -10,10 +10,8 @@ import com.example.demo.utils.MatrixOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import java.io.*;
 import java.util.ArrayList;
 import wniemiec.util.data.Pair;
 
@@ -50,6 +48,27 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
             e.printStackTrace();
             return false;
         }
+    }
+
+    @Override
+    public String[] getFirstLineWord(String filePath) {
+        File file = new File(filePath);
+        FileReader fileReader = null;
+        String[] words;
+
+        try {
+            fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line = bufferedReader.readLine();
+            words = line.split(",");
+
+            bufferedReader.close();
+            fileReader.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return words;
     }
 
     @Override

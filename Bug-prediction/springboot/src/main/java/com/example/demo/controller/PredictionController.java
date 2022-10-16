@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.common.Result;
 import com.example.demo.service.UserTrainInfoService;
 import com.example.demo.utils.Global;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,9 @@ import wniemiec.util.data.Pair;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -28,8 +29,8 @@ public class PredictionController {
     private UserTrainInfoService userTrainInfoService;
 
     @RequestMapping(value = "/userDefinedPrediction2")
-    public String userDefinedPrediction(@RequestParam("uploadFile")MultipartFile uploadFile,
-                                        @RequestParam("username")String username) {
+    public String userDefinedPrediction(@RequestParam("uploadFile") MultipartFile uploadFile,
+                                        @RequestParam("username") String username) {
         // 得到文件的名字
         String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename()).toLowerCase();
         // 将该csv文件存储到本地
@@ -43,11 +44,11 @@ public class PredictionController {
 
     @RequestMapping(value = "/userDefinedPrediction", method = RequestMethod.POST)
     @ResponseBody
-    public Pair<ArrayList<ArrayList<Double>>, Double> userDefinedPrediction(
-            @RequestParam("uploadFile")MultipartFile uploadFile,
-            @RequestParam("epochNum")Integer epochNum,
-            @RequestParam("batchSize")Integer batchSize,
-            @RequestParam("learningrate")Double learningrate) {
+    public Pair<String[], Pair<ArrayList<ArrayList<Double>>, Double>> userDefinedPrediction(
+            @RequestParam("uploadFile") MultipartFile uploadFile,
+            @RequestParam("epochNum") Integer epochNum,
+            @RequestParam("batchSize") Integer batchSize,
+            @RequestParam("learningrate") Double learningrate) {
 
         String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename()).toLowerCase();
 
@@ -74,13 +75,26 @@ public class PredictionController {
         userTrainInfoService.storeFile(uploadFile);
         /* 处理该csv文件,得到训练后的csv文件路径 */
         String sourceFilePath = Global.resourcesPath + "uploadFiles/" + fileName;
-        return userTrainInfoService.userDefinedTrainLogistic(sourceFilePath, epochNum, batchSize, learningrate);
+
+        // 获得参数名列表和结果
+        String[] words = userTrainInfoService.getFirstLineWord(sourceFilePath);
+        Pair<ArrayList<ArrayList<Double>>, Double> result = userTrainInfoService.userDefinedTrainLogistic(sourceFilePath, epochNum, batchSize, learningrate);
+
+        // 保留四位小数
+        for (ArrayList<Double> doubles : result.getFirst()) {
+            for (Double aDouble : doubles) {
+                aDouble = (double)Math.round(aDouble * 10000.0) / 10000;
+            }
+        }
+
+
+        return new Pair<>(words, result);
     }
 
     /* 系统预测,接收前端传来的csv文件,返回训练文件 */
     @RequestMapping(value = "/systemPrediction", method = RequestMethod.POST)
     @ResponseBody
-    public String systemPrediction(@RequestParam("uploadFile")MultipartFile uploadFile, @RequestParam("model") String model) {
+    public String systemPrediction(@RequestParam("uploadFile") MultipartFile uploadFile, @RequestParam("model") String model) {
 
         String result;
 
@@ -124,7 +138,7 @@ public class PredictionController {
             File file = new File(filePath);
             String fileName = file.getName();
 
-            if(!file.exists()) {
+            if (!file.exists()) {
                 //如果文件不存在就跳出
                 return;
             }
@@ -133,18 +147,18 @@ public class PredictionController {
             response.setContentType("multipart/form-data");
             //为文件重新设置名字，采用数据库内存储的文件名称
             response.addHeader("Content-Disposition", "attachment; filename=\"" +
-                    new String(fileName.getBytes(StandardCharsets.UTF_8),"ISO8859-1") + "\"");
+                    new String(fileName.getBytes(StandardCharsets.UTF_8), "ISO8859-1") + "\"");
             out = response.getOutputStream();
             //读取文件流
             int len = 0;
             byte[] buffer = new byte[1024 * 10];
-            while ((len = ips.read(buffer)) != -1){
-                out.write(buffer,0,len);
+            while ((len = ips.read(buffer)) != -1) {
+                out.write(buffer, 0, len);
             }
             out.flush();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 out.close();
                 ips.close();
@@ -167,7 +181,7 @@ public class PredictionController {
             File file = new File(filePath);
             String fileName = file.getName();
 
-            if(!file.exists()) {
+            if (!file.exists()) {
                 //如果文件不存在就跳出
                 return;
             }
@@ -176,18 +190,18 @@ public class PredictionController {
             response.setContentType("multipart/form-data");
             //为文件重新设置名字，采用数据库内存储的文件名称
             response.addHeader("Content-Disposition", "attachment; filename=\"" +
-                    new String(fileName.getBytes(StandardCharsets.UTF_8),"ISO8859-1") + "\"");
+                    new String(fileName.getBytes(StandardCharsets.UTF_8), "ISO8859-1") + "\"");
             out = response.getOutputStream();
             //读取文件流
             int len = 0;
             byte[] buffer = new byte[1024 * 10];
-            while ((len = ips.read(buffer)) != -1){
-                out.write(buffer,0,len);
+            while ((len = ips.read(buffer)) != -1) {
+                out.write(buffer, 0, len);
             }
             out.flush();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 out.close();
                 ips.close();
