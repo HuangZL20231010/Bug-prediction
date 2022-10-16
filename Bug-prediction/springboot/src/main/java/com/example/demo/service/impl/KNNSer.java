@@ -176,12 +176,12 @@ public class KNNSer implements KNN {
     }
 
 
-    public static void main(String[] args){
-        KNNSer knnSer = new KNNSer();
-        knnSer.init("C:\\Users\\FUBOFENG\\Desktop\\实训1\\Bug-prediction\\springboot\\src\\main\\resources\\static\\JDT.csv");
-        System.out.println("准确率："+knnSer.precise());
-//        knnSer.knn(knnSer.data_test.get(187),101);
-//        knnSer.print(knnSer.data_test);
-//        knnSer.print(knnSer.dataProcess(knnSer.data_test));
-    }
+//    public static void main(String[] args){
+//        KNNSer knnSer = new KNNSer();
+//        knnSer.init("C:\\Users\\FUBOFENG\\Desktop\\实训1\\Bug-prediction\\springboot\\src\\main\\resources\\static\\JDT.csv");
+//        System.out.println("准确率："+knnSer.precise());
+////        knnSer.knn(knnSer.data_test.get(187),101);
+////        knnSer.print(knnSer.data_test);
+////        knnSer.print(knnSer.dataProcess(knnSer.data_test));
+//    }
 }
