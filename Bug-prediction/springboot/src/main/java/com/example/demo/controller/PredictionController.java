@@ -16,6 +16,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -27,7 +28,7 @@ public class PredictionController {
     private UserTrainInfoService userTrainInfoService;
 
     @RequestMapping(value = "/userDefinedPrediction2")
-    public Double userDefinedPrediction(@RequestParam("uploadFile")MultipartFile uploadFile,
+    public String userDefinedPrediction(@RequestParam("uploadFile")MultipartFile uploadFile,
                                         @RequestParam("username")String username) {
         // 得到文件的名字
         String fileName = Objects.requireNonNull(uploadFile.getOriginalFilename()).toLowerCase();
@@ -35,7 +36,9 @@ public class PredictionController {
         userTrainInfoService.storeFile(uploadFile);
         /* 处理该csv文件,得到训练后的csv文件路径 */
         String sourceFilePath = Global.resourcesPath + "uploadFiles/" + fileName;
-        return userTrainInfoService.userDefinedEvaluationLogistic(Global.resourcesPath + "uploadFiles/" + fileName, fileName, username);
+
+        DecimalFormat df = new DecimalFormat("#.00");
+        return df.format(userTrainInfoService.userDefinedEvaluationLogistic(Global.resourcesPath + "uploadFiles/" + fileName, fileName, username));
     }
 
     @RequestMapping(value = "/userDefinedPrediction", method = RequestMethod.POST)

@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/15 16:41 wj">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_wniemiec_util_data_pair_1_0_0.xml" afterDir="false" />
+    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/15 20:33 wj">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/pojo/table/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/pojo/table/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +59,7 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoApplication">
+  <component name="RunManager" selected="JUnit.DemoApplicationTests.contextLoads">
     <configuration name="DemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -130,7 +122,8 @@
       <workItem from="1665748945646" duration="11627000" />
       <workItem from="1665812732243" duration="2421000" />
       <workItem from="1665822611657" duration="1316000" />
-      <workItem from="1665831860070" duration="3244000" />
+      <workItem from="1665831860070" duration="3511000" />
+      <workItem from="1665895710092" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="2022/9/30 22:44">
       <created>1664549054890</created>
@@ -195,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665823316015</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2022/10/15 20:33 wj">
+      <created>1665837236990</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665837236990</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,17 +222,7 @@
     <MESSAGE value="2022/10/15 13:46 wj" />
     <MESSAGE value="2022/10/15 16:36 wj" />
     <MESSAGE value="2022/10/15 16:41 wj" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/10/15 16:41 wj" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Bug-prediction/springboot/src/test/java/com/example/demo/DemoApplicationTests.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="2022/10/15 20:33 wj" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/10/15 20:33 wj" />
   </component>
 </project>
