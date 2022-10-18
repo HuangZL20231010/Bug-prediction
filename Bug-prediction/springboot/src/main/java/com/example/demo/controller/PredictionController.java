@@ -3,13 +3,14 @@ package com.example.demo.controller;
 import com.example.demo.service.UserTrainInfoService;
 import com.example.demo.utils.Global;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import wniemiec.util.data.Pair;
+//import wniemiec.util.data.Pair;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
@@ -90,7 +91,7 @@ public class PredictionController {
         }
 
 
-        return new Pair<>(words, result);
+        return Pair.of(words, result);
     }
 
     /* 系统预测,接收前端传来的csv文件,返回训练文件 */

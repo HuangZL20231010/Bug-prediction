@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="1cc6300c-778b-473b-9dc0-1d9046792106" name="Default Changelist" comment="TKOTKCh something fix on UserTrainInfoServiceImpl 2022/10/9">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -25,6 +26,13 @@
       <change beforePath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vuee/src/views/SelfTrainView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/SelfTrainView.vue" afterDir="false" />
     </list>
+=======
+    <list default="true" id="1cc6300c-778b-473b-9dc0-1d9046792106" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/springboot/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+>>>>>>> 0acaa43d87b12baff6399cbccc6ab3a8fe74dde6
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +44,87 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="216" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="FUSProjectUsageTrigger">
+    <session id="631623960">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1654" />
+          <entry key="PLAIN_TEXT" value="7" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/KNN.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/KNNSer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="176" selection-start-line="176" selection-end-line="176" />
+              <folding>
+                <element signature="method#dataProcess#0;class#KNNSer#0" />
+                <element signature="method#calDistance#0;class#KNNSer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="117" column="73" selection-start-line="117" selection-start-column="73" selection-end-line="117" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/FileProcessImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/utils/Global.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+>>>>>>> 0acaa43d87b12baff6399cbccc6ab3a8fe74dde6
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -82,7 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,6 +298,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -340,8 +429,13 @@
       <workItem from="1665404674265" duration="410000" />
       <workItem from="1665410051129" duration="1877000" />
       <workItem from="1665579192843" duration="3645000" />
+<<<<<<< HEAD
       <workItem from="1665827230360" duration="6152000" />
       <workItem from="1665888877593" duration="4135000" />
+=======
+      <workItem from="1665749372113" duration="243000" />
+      <workItem from="1665823419929" duration="5777000" />
+>>>>>>> 0acaa43d87b12baff6399cbccc6ab3a8fe74dde6
     </task>
     <task id="LOCAL-00001" summary="TKOTKCh MOv2.0 FPv1.0 LRv1.0">
       <created>1664548787571</created>
@@ -357,16 +451,23 @@
       <option name="project" value="LOCAL" />
       <updated>1665307245402</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="KNN系统预测">
+      <created>1665832647354</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665832647354</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6240000" />
+    <option name="totallyTimeSpent" value="12017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26340482" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26675603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -416,7 +517,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TKOTKCh MOv2.0 FPv1.0 LRv1.0" />
     <MESSAGE value="TKOTKCh something fix on UserTrainInfoServiceImpl 2022/10/9" />
-    <option name="LAST_COMMIT_MESSAGE" value="TKOTKCh something fix on UserTrainInfoServiceImpl 2022/10/9" />
+    <MESSAGE value="KNN系统预测" />
+    <option name="LAST_COMMIT_MESSAGE" value="KNN系统预测" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -449,20 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/KNN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="80" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/FileProcessImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/utils/Global.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -470,12 +558,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/FileProcessImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/KNN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="117" column="73" selection-start-line="117" selection-start-column="73" selection-end-line="117" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/KNNSer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        <state relative-caret-position="529">
+          <caret line="176" selection-start-line="176" selection-end-line="176" />
           <folding>
-            <element signature="method#init#1;class#KNNSer#0" />
+            <element signature="method#dataProcess#0;class#KNNSer#0" />
+            <element signature="method#calDistance#0;class#KNNSer#0" />
           </folding>
         </state>
       </provider>

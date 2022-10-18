@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
+import org.springframework.data.util.Pair;
 import org.springframework.web.multipart.MultipartFile;
-import wniemiec.util.data.Pair;
 import java.util.ArrayList;
 
 public interface UserTrainInfoService {
@@ -22,9 +22,9 @@ public interface UserTrainInfoService {
 
     // 用户自定义训练部分,采用Logistic模型,传入csv文件的绝对路径和文件名,再传入三个超参和用户名
     Pair<ArrayList<ArrayList<Double>>, Double> userDefinedTrainLogistic(String filePath,
-                                                                                      Integer epochNum,
-                                                                                      Integer batchSize,
-                                                                                      Double learningrate);
+                                                                        Integer epochNum,
+                                                                        Integer batchSize,
+                                                                        Double learningrate);
 
     Double userDefinedEvaluationLogistic(String filePath, String fileName, String userName);
 }

@@ -8,12 +8,13 @@ import com.example.demo.service.UserTrainInfoService;
 import com.example.demo.utils.Global;
 import com.example.demo.utils.MatrixOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.util.ArrayList;
-import wniemiec.util.data.Pair;
+//import wniemiec.util.data.Pair;
 
 @Service
 public class UserTrainInfoServiceImpl implements UserTrainInfoService {
@@ -138,7 +139,7 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
         ArrayList<ArrayList<Double>> user_all_labels=MatrixOperation.iloc(user_origin_data,0,user_origin_data.get(0).size()-1,user_origin_data.size()-1,user_origin_data.get(0).size()-1);
         user_logisticRegression=new LogisticRegressionImpl(false,user_all_features.get(0).size());
         user_logisticRegression.train(user_all_features,user_all_labels,epochNum,batchSize,learningrate);
-        Pair<ArrayList<ArrayList<Double>>, Double> result = new Pair<>(user_logisticRegression.weights,user_logisticRegression.getBias());
+        Pair<ArrayList<ArrayList<Double>>, Double> result = Pair.of(user_logisticRegression.weights,user_logisticRegression.getBias());
 
 
         return result;
