@@ -1,10 +1,10 @@
 <template>
-  <div style="background-color: #f2f3f5;height: 380vh">
-    <div class="father">
+  <div style="background-color: #f2f3f5;height: 300vh">
+    <div class="father" :style="styleVar">
 
       <!--训练集上传-->
-      <div class="upLoadArea" v-if="!isAlreadUpload">
-        <div class="modelChoose" v-if="!isAlreadUpload" >
+      <div class="upLoadArea" v-if="!isTrainUpload">
+        <div class="modelChoose" >
           <div id="select">
             <el-select v-model="modelName"
                        clearable size="large"
@@ -55,7 +55,7 @@
 
 
       <!--测试集下载和上传-->
-      <div class="dowloadArea" >
+      <div class="dowloadArea" v-if="isTrainUpload">
         <div class="buttondiv">
           <el-button type="primary"
                      style="height: 200px;width: 200px;border-radius: 50%;margin-right: 2vw"
@@ -95,9 +95,9 @@
       </div>
 
 
-      <!--图标展示区-->
-      <div class="chartShow" v-if="isAlreadUpload">
-        <div id="barChart" style="height: 90vh"></div>
+      <!--图表展示区-->
+      <div class="chartShow" v-if="isTrainUpload">
+        <div id="barChart" :style="styleVar"></div>
       </div>
     </div>
   </div>
@@ -125,8 +125,6 @@ export default {
       epochNum:'5',
       batchSize:'1',
       alpha:'',
-      // KValue:'',
-      // wise:'',
 
       chooseLogical:false,
       chooseK:false,
@@ -134,9 +132,11 @@ export default {
       data_attr:[],//特征名
       data_num:[],//特征参数值
       attr_num:0,//特征数
-      father_height:'300vh',
+      father_height:90,
+      barchart_height:10,
 
-      isAlreadUpload:false,
+      isTrainUpload:false,
+      isTestUpload:false,
 
     }
   },
@@ -144,7 +144,8 @@ export default {
   computed: {
     styleVar() {
       return {
-        "--father_height": this.father_height
+        "--father_height": this.father_height+'vh',
+        "--barchart_height":this.barchart_height+'vh'
       };
     }
   },
@@ -208,15 +209,13 @@ export default {
       axios.post('http://localhost:9090/prediction/userDefinedPrediction', fileFormData).then((res) => {
         // console.log(res)
         console.log("训练集上传成功！")
-        // console.log(res.data.second.first);
+        console.log(res.data);
 
         //参数值获取
         _this.data_num1=res.data.second.first;
 
-
         //特征名称获取
         _this.data_attr=res.data.first;
-        _this.data_attr.pop();
 
 
         console.log('现参数名：')
@@ -241,7 +240,9 @@ export default {
 
 
         alert('模型已训练完成，快去上传测试集测试一下吧~');
-        _this.isAlreadUpload=true;
+        _this.isTrainUpload=true;
+        _this.father_height=90+_this.attr_num;
+        _this.barchart_height+=_this.attr_num;
         //图表
         this.initEcharts();
       })
@@ -288,6 +289,7 @@ export default {
       axios.post('http://localhost:9090/prediction/userDefinedPrediction2', fileFormData).then((res) => {
         // console.log(res)
         if (res.data) {
+          console.log(res)
           console.log("测试集上传成功！")
           console.log(res.data);
           alert()
@@ -345,7 +347,7 @@ export default {
               show: true,
               formatter: '{b}'
             },
-            data: this.data_num1
+            data: this.data_num
           }
         ]
       };
@@ -356,7 +358,7 @@ export default {
 }
 </script>
 
-<style  scoped  >
+<style  scoped>
 .father{
   width: 80%;
   height: var(--father_height);
@@ -455,6 +457,10 @@ export default {
 
   border-radius: 30px;
   border:2px dashed darkgray;
+}
+
+#barChart{
+  height: var(--barchart_height)
 }
 
 .successArea{

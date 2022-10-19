@@ -4,35 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="1cc6300c-778b-473b-9dc0-1d9046792106" name="Default Changelist" comment="TKOTKCh something fix on UserTrainInfoServiceImpl 2022/10/9">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/predictionFiles/SystemLogistic_jdt.csv" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/predictionFiles/SystemLogistic_jdt.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/uploadFiles/JDT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/uploadFiles/JDT.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/pojo/table/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/KNN.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/KNN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/read" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/read" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vuee/src/views/SelfTrainView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/SelfTrainView.vue" afterDir="false" />
     </list>
-=======
-    <list default="true" id="1cc6300c-778b-473b-9dc0-1d9046792106" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <ignored path="$PROJECT_DIR$/springboot/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
->>>>>>> 0acaa43d87b12baff6399cbccc6ab3a8fe74dde6
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,87 +34,6 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="216" />
   </component>
-<<<<<<< HEAD
-=======
-  <component name="FUSProjectUsageTrigger">
-    <session id="631623960">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="1654" />
-          <entry key="PLAIN_TEXT" value="7" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/KNN.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/KNNSer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="176" selection-start-line="176" selection-end-line="176" />
-              <folding>
-                <element signature="method#dataProcess#0;class#KNNSer#0" />
-                <element signature="method#calDistance#0;class#KNNSer#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="117" column="73" selection-start-line="117" selection-start-column="73" selection-end-line="117" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/FileProcessImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/utils/Global.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
->>>>>>> 0acaa43d87b12baff6399cbccc6ab3a8fe74dde6
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -306,17 +215,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "WebServerToolWindowFactoryState": "false",
-    "spring.configuration.checksum": "fe01ce2a7fbac8fafaed7c982a04e229",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fe01ce2a7fbac8fafaed7c982a04e229&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -429,13 +338,8 @@
       <workItem from="1665404674265" duration="410000" />
       <workItem from="1665410051129" duration="1877000" />
       <workItem from="1665579192843" duration="3645000" />
-<<<<<<< HEAD
-      <workItem from="1665827230360" duration="6152000" />
-      <workItem from="1665888877593" duration="4135000" />
-=======
       <workItem from="1665749372113" duration="243000" />
       <workItem from="1665823419929" duration="5777000" />
->>>>>>> 0acaa43d87b12baff6399cbccc6ab3a8fe74dde6
     </task>
     <task id="LOCAL-00001" summary="TKOTKCh MOv2.0 FPv1.0 LRv1.0">
       <created>1664548787571</created>
@@ -530,8 +434,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java</url>
-          <line>135</line>
-          <option name="timeStamp" value="18" />
+          <line>109</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

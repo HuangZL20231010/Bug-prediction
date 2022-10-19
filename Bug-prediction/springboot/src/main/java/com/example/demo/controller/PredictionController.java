@@ -30,6 +30,7 @@ public class PredictionController {
     private UserTrainInfoService userTrainInfoService;
 
     @RequestMapping(value = "/userDefinedPrediction2",method = RequestMethod.POST)
+    @ResponseBody
     public String userDefinedPrediction(@RequestParam("uploadFile") MultipartFile uploadFile,
                                         @RequestParam("username") String username) {
 
@@ -40,7 +41,7 @@ public class PredictionController {
         /* 处理该csv文件,得到训练后的csv文件路径 */
         String sourceFilePath = Global.resourcesPath + "uploadFiles/" + fileName;
 
-        DecimalFormat df = new DecimalFormat("#.00");
+        DecimalFormat df = new DecimalFormat("0.00");
         return df.format(userTrainInfoService.userDefinedEvaluationLogistic(Global.resourcesPath + "uploadFiles/" + fileName, fileName, username));
 
     }

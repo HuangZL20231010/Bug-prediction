@@ -2,3 +2,16 @@
 选择模型（逻辑回归，K近邻）
 逻辑回归超参：轮数（epochnum，int类型）批量数（batchsize，int类型）学习率（double类型）
 K近邻：K（int类型）和权重（double类型）
+
+自定义预测：
+1.初始只有上传模块：                                     !isTrainUpload
+    father 90vh（略大于upload块）
+2.上传成功以后：
+    upload模块换成上传成功模块，提醒去下载测试集并上传，       isTrainUpload
+    显示download模块，显示图表                           isTrainUpload
+    图表height根据参数的个数改变                          isTrainUpload
+    father 图表+download
+
+3.上传测试集成功后:
+    downmload模块隐藏，换成上传成功，并显示准确率！            isTrainUpload、isTestUpload
+    再加一个“再来一次”的按钮
