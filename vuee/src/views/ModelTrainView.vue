@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #f2f3f5;height: 90vh">
+  <div style="background-color: #f2f3f5;height: 90vh;overflow:hidden;">
     <div class="father">
       <div class="modelChoose" v-if="!isAlreadUpload">
         <el-select v-model="modelName"
@@ -53,6 +53,7 @@
 
 <script>
 import axios from "axios";
+import anime from "animejs/lib/anime.es.js";
 
 export default {
   name: "modelTrainView",
@@ -73,6 +74,18 @@ export default {
       isAlreadUpload:false,
 
     }
+  },
+
+  mounted() {
+    this.fatherAnimation=anime({
+      targets:".father",
+
+      translateY:'80vh',
+      opacity:0,
+      during:1500,
+      direction:'reverse',
+      easing:'easeInQuad',
+    });
   },
 
   methods:{
@@ -174,17 +187,20 @@ export default {
 </script>
 
 <style scoped>
+
+
 .father{
   width: 80%;
   height: 650px;
   margin-left: 10%;
   margin-top: 15px;
   background-color: #ddf6fa;
-  position: absolute;
+  position: relative;
 
   border-radius: 30px;
   border:1px solid #eeeeee;
   box-shadow: darkgrey 0px 0px 20px 5px;
+
 }
 
 .modelChoose{
@@ -193,6 +209,7 @@ export default {
   width: 100%;
   height: 100px;
   margin-top: 5%;
+  overflow: hidden;
 }
 
 .upLoadArea{
@@ -205,6 +222,7 @@ export default {
 
   border-radius: 30px;
   border:2px dashed darkgray;
+  overflow: hidden;
 }
 
 .buttondiv{
@@ -214,6 +232,7 @@ export default {
 
   position: absolute;
   top: 15%;
+  overflow: hidden;
 }
 
 
@@ -226,6 +245,7 @@ export default {
 
   font-size: 12px;
   color: #5e6673;
+  overflow: hidden;
 }
 .file-name{
   /*font-size: 15px;*/
@@ -239,5 +259,6 @@ export default {
   position: absolute;
   width: 100%;
   top:15%;
+  overflow: hidden;
 }
 </style>

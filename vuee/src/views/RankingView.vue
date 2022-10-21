@@ -1,7 +1,7 @@
 <template>
-  <div style="background-color: #f2f3f5;height: 90vh">
+  <div style="background-color: #f2f3f5;height: 90vh;overflow: hidden">
     <div class="father">
-      <div id="cup" >
+      <div id="cup" @click="handleclick">
 
       </div>
 
@@ -20,7 +20,7 @@
             准确率
           </div>
         </div>
-        <div class="userCard" v-for="(item,index) in rankSet">
+        <div id="userCard" v-for="(item,index) in rankSet">
           <div class="number">
             {{index+1}}
           </div>
@@ -42,6 +42,7 @@
 
 <script>
 import axios from "axios";
+import anime from 'animejs/lib/anime.es.js';
 
 export default {
   name: "rankingView",
@@ -63,8 +64,35 @@ export default {
       console.log(err);
     })
   },
-  methods:{
+  mounted() {
 
+    this.fatherAnimation=anime({
+      targets:".father",
+
+      translateY:'80vh',
+      opacity:0,
+      during:1500,
+      direction:'reverse',
+      easing:'easeInQuad',
+    });
+
+    this.headerAnimation=anime({
+      targets: ['#rank'],
+      keyframes:[
+        {width:0, opacity:0},
+        {width:'70%', opacity:1}
+      ],
+      duration: 1500,
+      easing: 'easeInQuad'
+    });
+
+
+  },
+
+  methods:{
+    handleclick(){
+      this.headerAnimation.play()
+    }
   }
 }
 </script>
@@ -74,14 +102,16 @@ export default {
   width: 80%;
   height: 80vh;
   margin-left: 10%;
-  margin-top: 15px;
+  top: 15px;
   background-color: #ddf6fa;
-  position: absolute;
+  position: relative;
 
   border-radius: 30px;
   border:1px solid #eeeeee;
   box-shadow: darkgrey 0px 0px 20px 5px;
- display: flex;
+  display: flex;
+
+
 }
 #cup{
   /*background-color: #d91616;*/
@@ -90,22 +120,23 @@ export default {
   background-repeat: no-repeat;
 
   /*position: absolute;*/
-  width: 25%;
-  height: 60%;
-  margin-top: 20%;
-  margin-left: 10%;
+  width: 20%;
+  height: 50%;
+  margin-top: 10%;
+  margin-left: 12%;
 }
 
 #rank{
 
   /*background-color: #cb7878;*/
   /*position: absolute;*/
-  width: 70%;
+  width: 0;
+  opacity:0;
   height: 100%;
 }
 
 #header{
-  background-color: rgba(133, 173, 178, 0.73);
+  background-color: rgba(147, 209, 218, 0.73);
   position: relative;
   margin-top: 1.5vh;
   left: 17%;
@@ -119,15 +150,8 @@ export default {
   /*animation:myfirst 5s;*/
 }
 
-@keyframes myfirst
-{
-  0%   {background:#7485c7;}
-  25%  {background:yellow;}
-  50%  {background:blue;}
-  100% {background:green;}
-}
 
-.userCard{
+#userCard{
   background-color: #ffffff;
   position: relative;
   margin-top: 2px;
@@ -140,11 +164,11 @@ export default {
 
   display: flex;
   box-shadow: darkgrey 0px 0px 10px 4px;
-  transition: All 0.4s ease-in-out;
 
+  transition: All 0.4s ease-in-out;
 }
 
-.userCard:hover{
+#userCard:hover{
   transform: scale(1.2) translate(0,-10px);
 }
 
@@ -155,7 +179,7 @@ export default {
   border-right: 1px dashed darkgray;
 
 
-  font-family: 微软雅黑;
+  font-family: 微软雅黑,serif;
 }
 
 .userName{
@@ -180,17 +204,6 @@ export default {
   height: 70vh;
   margin-left: 10%;
   top: 10vh;
-
-  border-radius: 30px;
-  border:1px solid darkgray;
-}
-.dowloadArea{
-  /*background-color: #ee0e0e;*/
-  position: relative;
-  width: 80%;
-  height: 50vh;
-  margin-left: 10%;
-  top: 20vh;
 
   border-radius: 30px;
   border:1px solid darkgray;

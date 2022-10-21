@@ -207,28 +207,3 @@ body > .el-container {
 }
 
 </style>
-
-<!--<style scoped>-->
-<!--.layout-container-demo .el-header {-->
-<!--  position: relative;-->
-<!--  background-color: var(&#45;&#45;el-color-primary-light-7);-->
-<!--  color: var(&#45;&#45;el-text-color-primary);-->
-<!--}-->
-<!--.layout-container-demo .el-aside {-->
-<!--  color: var(&#45;&#45;el-text-color-primary);-->
-<!--  background: var(&#45;&#45;el-color-primary-light-8);-->
-<!--}-->
-<!--.layout-container-demo .el-menu {-->
-<!--  border-right: none;-->
-<!--}-->
-<!--.layout-container-demo .el-main {-->
-<!--  padding: 0;-->
-<!--}-->
-<!--.layout-container-demo .toolbar {-->
-<!--  display: inline-flex;-->
-<!--  align-items: center;-->
-<!--  justify-content: center;-->
-<!--  height: 100%;-->
-<!--  right: 20px;-->
-<!--}-->
-<!--</style>-->

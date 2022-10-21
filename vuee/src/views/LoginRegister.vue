@@ -147,6 +147,7 @@
 
 <style scoped="scoped">
 	.login-register{
+    background-color: #f2f3f5;
 		width: 100vw;
 		height: 100vh;
 		box-sizing: border-box;
@@ -160,8 +161,12 @@
 		transform: translate(-50%,-50%);
 		background-color: #fff;
 		border-radius: 20px;
-		box-shadow: 0 0 3px #f0f0f0,
-					0 0 6px #f0f0f0;
+		/*box-shadow: 0 0 3px #f0f0f0,*/
+		/*			0 0 6px #f0f0f0;*/
+
+    border:1px solid #eeeeee;
+    box-shadow: darkgrey 0px 0px 20px 5px;
+
 	}
 	.big-box{
 		width: 70%;

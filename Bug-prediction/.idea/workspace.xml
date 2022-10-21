@@ -6,21 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc6300c-778b-473b-9dc0-1d9046792106" name="Default Changelist" comment="TKOTKCh something fix on UserTrainInfoServiceImpl 2022/10/9">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/UserTrainInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/predictionFiles/SystemLogistic_jdt.csv" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/predictionFiles/SystemLogistic_jdt.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/uploadFiles/JDT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/uploadFiles/JDT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/controller/PredictionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuee/src/read" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/read" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/uploadFiles/JDT(不带标签).csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuee/src/views/RankingView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/RankingView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vuee/src/views/SelfTrainView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuee/src/views/SelfTrainView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -340,6 +329,7 @@
       <workItem from="1665579192843" duration="3645000" />
       <workItem from="1665749372113" duration="243000" />
       <workItem from="1665823419929" duration="5777000" />
+      <workItem from="1666247970519" duration="1568000" />
     </task>
     <task id="LOCAL-00001" summary="TKOTKCh MOv2.0 FPv1.0 LRv1.0">
       <created>1664548787571</created>
@@ -429,23 +419,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java</url>
-          <line>157</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java</url>
           <line>109</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/controller/PredictionController.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/example/demo/service/impl/LogisticRegressionImpl.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #f2f3f5;height: 300vh">
+  <div class="grandfather" :style="styleVar">
     <div class="father" :style="styleVar">
 
       <!--训练集上传-->
@@ -28,7 +28,7 @@
               <el-input-number v-model="batchSize"  :step="1" :max="100" :min="0"  :disabled="!chooseLogical"/>
             </el-form-item>
             <el-form-item label="学习率"  >
-              <el-input-number v-model="alpha" :precision="3" :step="0.1" :max="10" :min="0" :disabled="!chooseLogical"/>
+              <el-input-number v-model="alpha" :precision="3" :step="0.1" :max="10" :min="0.1" :disabled="!chooseLogical"/>
             </el-form-item>
           </div>
 
@@ -53,9 +53,22 @@
         <div slot="tip" class="tip">只能上传csv文件</div>
       </div>
 
+      <div class="successArea1" v-if="isTrainUpload">
+        <el-result
+            icon="success"
+            title="训练集上传成功"
+            sub-title="参数结果已返回"
+        >
+          <template #extra>
+            <span id="txt">模型已训练完成，快上传测试集测试一下吧~</span>
+          </template>
+        </el-result>
+
+      </div>
+
 
       <!--测试集下载和上传-->
-      <div class="dowloadArea" v-if="isTrainUpload">
+      <div class="dowloadArea" v-if="isTrainUpload&&!isTestUpload">
         <div class="buttondiv">
           <el-button type="primary"
                      style="height: 200px;width: 200px;border-radius: 50%;margin-right: 2vw"
@@ -94,11 +107,24 @@
         </div>
       </div>
 
+      <div class="successArea2" v-if="isTrainUpload&&isTestUpload">
+        <el-result
+            icon="success"
+            title="测试集上传成功！"
+        >
+          <template #extra>
+            <span id="txt">准确率:{{resul_accuracy}}</span>
+          </template>
+        </el-result>
+
+      </div>
 
       <!--图表展示区-->
-      <div class="chartShow" v-if="isTrainUpload">
-        <div id="barChart" :style="styleVar"></div>
+      <div class="chartShow" v-if="isTrainUpload" :style="styleVar">
+        <div id="barChart" ></div>
       </div>
+
+
     </div>
   </div>
 
@@ -107,6 +133,7 @@
 <script>
 import axios from "axios";
 import * as echarts from 'echarts';
+import anime from "animejs";
 
 export default {
   name: "selfTrainView",
@@ -122,17 +149,22 @@ export default {
       files:'',
       fileName:'',
       filePath:'',
-      epochNum:'5',
-      batchSize:'1',
-      alpha:'',
+      epochNum:'10',
+      batchSize:'5',
+      alpha:'0.3',
 
       chooseLogical:false,
       chooseK:false,
 
+
+
       data_attr:[],//特征名
       data_num:[],//特征参数值
       attr_num:0,//特征数
-      father_height:90,
+      resul_accuracy:0,
+
+      grandfather_height:90,
+      father_height:85,
       barchart_height:10,
 
       isTrainUpload:false,
@@ -145,7 +177,8 @@ export default {
     styleVar() {
       return {
         "--father_height": this.father_height+'vh',
-        "--barchart_height":this.barchart_height+'vh'
+        "--barchart_height":this.barchart_height+'vh',
+        "--grandfather_height":this.grandfather_height+'vh'
       };
     }
   },
@@ -156,12 +189,19 @@ export default {
     console.log("username:"+sessionStorage.getItem('username'));
     this.username=sessionStorage.getItem('username');
 
-    console.log('原参数名：')
-    console.log(this.data_attr)
-    console.log('原参数值：')
-    console.log(this.data_num)
+  },
 
-    // console.log(this.data_num[0].label)
+  mounted() {
+
+    this.fatherAnimation = anime({
+      targets: ".father",
+
+      translateY: '80vh',
+      opacity: 0,
+      during: 1500,
+      direction: 'reverse',
+      easing: 'easeInQuad',
+    });
 
   },
 
@@ -181,10 +221,14 @@ export default {
     },
 
     beforeUpload_train(file){
+      if(this.modelName===''){
+        this.$message.warning('请选择模型！')
+        return;
+      }
       this.files = file;
       const extension = file.name.split('.')[1] === 'csv'
       if (!extension) {
-        this.$message.warning('上传模板只能是csv格式!')
+        this.$message.warning('只能上传csv格式!')
         return
       }
       this.fileName = file.name;
@@ -193,11 +237,6 @@ export default {
 
 
     submitUpload_train() {
-      // if(this.fileName === ""){
-      //   this.$message.warning('请选择要上传的文件！')
-      //   return false
-      // }
-
       let fileFormData = new FormData();
       fileFormData.append('uploadFile', this.files);//uploadFile是键，files是值，就是要传的文件，test.zip是要传的文件名
       // fileFormData.append('uploadFile', this.files, this.fileName,);//filename是键，file是值，就是要传的文件，test.zip是要传的文件名
@@ -209,42 +248,42 @@ export default {
       axios.post('http://localhost:9090/prediction/userDefinedPrediction', fileFormData).then((res) => {
         // console.log(res)
         console.log("训练集上传成功！")
-        console.log(res.data);
 
         //参数值获取
         _this.data_num1=res.data.second.first;
-
-        //特征名称获取
-        _this.data_attr=res.data.first;
-
-
-        console.log('现参数名：')
-        console.log(_this.data_attr);
-        console.log('现参数值：')
-        console.log(_this.data_num1);
-
         _this.data_num=_this.data_num1;
         for(let i=0;i<_this.data_num.length;i++){
           _this.data_num[i]=Math.round(_this.data_num[i] * 100 ) / 100;
         }
 
+
+        //特征名称获取
+        _this.data_attr=res.data.first;
+        _this.data_attr.pop();
+
+
+        console.log('现参数名data_attr：');
+        console.log(_this.data_attr);
+        console.log('现参数值data_num1：');
         console.log(_this.data_num);
+
+
         //特征数获取
         _this.attr_num=_this.data_attr.length;
 
 
-
-
-
-
-
-
-        alert('模型已训练完成，快去上传测试集测试一下吧~');
+        _this.father_height=140+_this.attr_num*2.5;
+        _this.barchart_height+=_this.attr_num*2.5;
+        _this.grandfather_height=_this.father_height+10;
         _this.isTrainUpload=true;
-        _this.father_height=90+_this.attr_num;
-        _this.barchart_height+=_this.attr_num;
+
+
         //图表
-        this.initEcharts();
+
+        this.$nextTick(function () {
+          this.initEcharts();
+        });
+
       })
     },
 
@@ -289,10 +328,11 @@ export default {
       axios.post('http://localhost:9090/prediction/userDefinedPrediction2', fileFormData).then((res) => {
         // console.log(res)
         if (res.data) {
-          console.log(res)
           console.log("测试集上传成功！")
           console.log(res.data);
-          alert()
+          _this.resul_accuracy=res.data;
+
+          _this.isTestUpload=true;
           //图表
 
         } else {
@@ -304,9 +344,11 @@ export default {
 
     //初始化图标
     initEcharts(){
-      var myChart = echarts.init(document.getElementById('barChart'));
-// 绘制图表
+      var element=document.getElementById('barChart');
+      var myChart = echarts.init(element);
+    // 绘制图表
       let option;
+
       option={
         title: {
           text: '训练特征值参数表'
@@ -351,60 +393,37 @@ export default {
           }
         ]
       };
+      console.log('33333');
+      // console.log(this.data_attr);
+      // console.log(this.data_num);
       myChart.setOption(option);
-
     }
   }
 }
 </script>
 
 <style  scoped>
+.grandfather{
+  background-color: #f2f3f5;
+  height: var(--grandfather_height);
+  overflow: hidden
+}
+
 .father{
   width: 80%;
   height: var(--father_height);
   margin-left: 10%;
   margin-top: 15px;
   background-color: #ddf6fa;
-  position: absolute;
+  position: relative;
 
   border-radius: 30px;
   border:1px solid #eeeeee;
   box-shadow: darkgrey 0px 0px 20px 5px;
 }
 
-.dowloadArea{
-  /*background-color: #ee0e0e;*/
-  position: relative;
-  width: 80%;
-  height: 50vh;
-  margin-left: 10%;
-  top: 20vh;
-
-  border-radius: 30px;
-  border:2px dashed darkgray;
-
-  /*display: flex;*/
-  /*justify-content: center;*/
-}
-
-
-.buttondiv{
-  /*background: aquamarine;*/
-  width: 100%;
-  height: auto;
-
-  position: absolute;
-  top: 15%;
-
-  display: flex;
-  justify-content: center;
-}
-
-
-
-
 .upLoadArea{
-  /*background-color: #cb7878;*/
+  /*background-color: #da1515;*/
   position: relative;
   width: 80%;
   height: 70vh;
@@ -414,6 +433,20 @@ export default {
   border-radius: 30px;
   border:2px dashed darkgray;
 }
+
+
+.successArea1{
+  /*background-color: #cb7878;*/
+  position: relative;
+  width: 80%;
+  height: 40vh;
+  margin-left: 10%;
+  top: 10vh;
+
+  border-radius: 30px;
+  border:2px dashed darkgray;
+}
+
 
 .modelChoose{
   /*background-color: #409dfd;*/
@@ -447,11 +480,53 @@ export default {
   margin-right: 2vw;
 }
 
+
+.dowloadArea{
+  /*background-color: #ee0e0e;*/
+  position: relative;
+  width: 80%;
+  height: 50vh;
+  margin-left: 10%;
+  top: 20vh;
+
+  border-radius: 30px;
+  border:2px dashed darkgray;
+
+  /*display: flex;*/
+  /*justify-content: center;*/
+}
+
+
+.buttondiv{
+  /*background: aquamarine;*/
+  width: 100%;
+  height: auto;
+
+  position: absolute;
+  top: 15%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.successArea2{
+  /*background-color: #cb7878;*/
+  position: relative;
+  width: 80%;
+  height: 50vh;
+  margin-left: 10%;
+  top: 20vh;
+
+  border-radius: 30px;
+  border:2px dashed darkgray;
+}
+
+
 .chartShow{
   /*background-color: #cb7878;*/
   position: relative;
   width: 80%;
-  height: 90vh;
+  height: var(--barchart_height);
   margin-left: 10%;
   top: 30vh;
 
@@ -460,15 +535,16 @@ export default {
 }
 
 #barChart{
-  height: var(--barchart_height)
+  height: var(--barchart_height);
+  width: 100%;
+  /*height: 2000px;*/
 }
 
-.successArea{
-  /*background-color: red;*/
-  position: absolute;
-  width: 100%;
-  top:15%;
+#txt{
+  font-size: 25px;
+  color: #7485c7;
 }
+
 </style>
 
 
