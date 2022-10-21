@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.util.ArrayList;
-//import wniemiec.util.data.Pair;
 
 @Service
 public class UserTrainInfoServiceImpl implements UserTrainInfoService {
@@ -140,7 +139,6 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
         user_logisticRegression.train(user_all_features,user_all_labels,epochNum,batchSize,learningrate);
         Pair<ArrayList<ArrayList<Double>>, Double> result = Pair.of(user_logisticRegression.weights,user_logisticRegression.getBias());
 
-
         return result;
     }
 
@@ -149,7 +147,7 @@ public class UserTrainInfoServiceImpl implements UserTrainInfoService {
 
         //系统用来评估此模型的EvaluateData.csv数据集，
         //下面两行为系统读取EvaluateData.csv的真实标签
-        ArrayList<ArrayList<Double>> evaluate_data=FileProcessImpl.read_csv(filePath,true);
+        ArrayList<ArrayList<Double>> evaluate_data=FileProcessImpl.read_csv(Global.resourcesPath + "EvaluateData.csv",true);
         ArrayList<ArrayList<Double>> evaluate_label=MatrixOperation.iloc(evaluate_data,0,evaluate_data.get(0).size()-1,evaluate_data.size()-1,evaluate_data.get(0).size()-1);
 
         //用户需下载没有标签的EvaluateData_nolabel.csv并数据处理返给系统，系统将用自己之前训练的模型预测结果，并将其与真实标签evaluate_label做比较
