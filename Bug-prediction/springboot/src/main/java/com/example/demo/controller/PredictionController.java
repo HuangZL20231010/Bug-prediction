@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-//import wniemiec.util.data.Pair;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;

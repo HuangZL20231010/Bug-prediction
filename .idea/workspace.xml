@@ -4,9 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/16 20:42 wj 系统预测Logistic修正">
+    <list default="true" id="507ab808-fe99-4f24-8e8d-3bde28fe0e43" name="默认更改列表" comment="2022/10/21  wj 系统预测Logistic修正">
+      <change afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/test/java/com/example/demo/service/impl/UserServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/UserTrainInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/controller/PredictionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/MailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/java/com/example/demo/service/impl/MailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/controller/PredictionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/controller/PredictionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/UserTrainInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/KNNSer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/KNNSer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/KNNSer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/LogisticRegressionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/classes/com/example/demo/service/impl/UserTrainInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bug-prediction/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bug-prediction/springboot/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +32,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,8 +72,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "D:/ShiXun",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "project.structure.last.edited": "工件",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "plugins.junitgenerator.application",
     "spring.configuration.checksum": "fe01ce2a7fbac8fafaed7c982a04e229",
     "vue.rearranger.settings.migration": "true"
   }
@@ -60,7 +87,16 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.DemoApplicationTests.contextLoads">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.demo.service.impl" />
+      <recent name="com.example.demo.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserServiceImplTest">
     <configuration name="DemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -72,6 +108,37 @@
       <option name="PACKAGE_NAME" value="com.example.demo" />
       <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.impl.UserServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.ifExistUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="ifExistUserName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,6 +166,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceImplTest.ifExistUserName" />
         <item itemvalue="JUnit.DemoApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
@@ -133,6 +202,14 @@
       <workItem from="1666154807355" duration="666000" />
       <workItem from="1666161906889" duration="100000" />
       <workItem from="1666320522062" duration="804000" />
+      <workItem from="1666328796185" duration="218000" />
+      <workItem from="1667373373860" duration="81000" />
+      <workItem from="1667896652878" duration="3314000" />
+      <workItem from="1667910070458" duration="198000" />
+      <workItem from="1667957880390" duration="995000" />
+      <workItem from="1668327158957" duration="303000" />
+      <workItem from="1668327478268" duration="1497000" />
+      <workItem from="1668406007083" duration="3235000" />
     </task>
     <task id="LOCAL-00001" summary="2022/9/30 22:44">
       <created>1664549054890</created>
@@ -225,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665924195373</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="2022/10/21  wj 系统预测Logistic修正">
+      <created>1666328899766</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1666328899766</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +340,16 @@
     <MESSAGE value="2022/10/16 13:04 wj 保留两位小数" />
     <MESSAGE value="2022/10/16 13:54 wj 保留四位小数" />
     <MESSAGE value="2022/10/16 20:42 wj 系统预测Logistic修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/10/16 20:42 wj 系统预测Logistic修正" />
+    <MESSAGE value="2022/10/21  wj 系统预测Logistic修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/10/21  wj 系统预测Logistic修正" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ShiXun$UserServiceImplTest.ic" NAME="UserServiceImplTest 覆盖结果" MODIFIED="1668408422712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.service.impl.*</FILTER>
+    </SUITE>
   </component>
 </project>
