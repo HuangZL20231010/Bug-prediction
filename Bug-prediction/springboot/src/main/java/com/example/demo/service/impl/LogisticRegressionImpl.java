@@ -29,7 +29,7 @@ public class LogisticRegressionImpl {
             return;
         }
         if(isSystem){
-            ArrayList<ArrayList<Double>>parameters=FileProcessImpl.read_csv(Global.resourcesPath + "LogisticParams.csv",false);
+            ArrayList<ArrayList<Double>>parameters=FileProcessImpl.read_csv("src/main/resources/static/LogisticParams.csv",false);
             weights=MatrixOperation.iloc(parameters,0,0,parameters.size()-2,0);
             bias=MatrixOperation.iloc(parameters,parameters.size()-1,0,parameters.size()-1,0).get(0).get(0);
         }else{

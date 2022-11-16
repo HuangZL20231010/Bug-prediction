@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo.DemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.485 s <<< FAILURE! - in com.example.demo.DemoApplicationTests
+contextLoads  Time elapsed: 0.376 s  <<< ERROR!
+java.lang.RuntimeException: java.io.FileNotFoundException: D:\ShiXun\Bug-prediction\springboot\src\main\resources\static\uploadFiles\JDT.csv (系统找不到指定的路径。)
+	at com.example.demo.DemoApplicationTests.contextLoads(DemoApplicationTests.java:29)
+Caused by: java.io.FileNotFoundException: D:\ShiXun\Bug-prediction\springboot\src\main\resources\static\uploadFiles\JDT.csv (系统找不到指定的路径。)
+	at com.example.demo.DemoApplicationTests.contextLoads(DemoApplicationTests.java:22)
+
